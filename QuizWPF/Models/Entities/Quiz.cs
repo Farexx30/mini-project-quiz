@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QuizWPF.Models.Entities
+{
+    public class Quiz
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public string? Description { get; set; } //Opcjonalne
+        public Category Category { get; set; }
+        public List<Question> Questions { get; set; } = [];
+    }
+
+    public enum Category
+    {
+        Games,
+        Animals,
+        Math,
+        Geography,
+        English,
+        Science
+    }
+}
