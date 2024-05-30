@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Łukasz\Documents\Studia\Programowanie obiektowe i graficzne\QuizWPF\QuizWPF\App.xaml
-11407045341
+11425843366
 
-14-1474695084
+412063700197
 258-1465634462
-MainWindow.xaml;
+MainWindow.xaml;Views\GenerateQuiz\ChooseQuizToModifyView.xaml;Views\GenerateQuiz\GenerateQuizMenuView.xaml;Views\GenerateQuiz\ModifyQuestionView.xaml;Views\GenerateQuiz\QuestionListToModifyView.xaml;Views\GenerateQuiz\QuizConfirmationView.xaml;Views\GenerateQuiz\QuizDetailsView.xaml;Views\MenuView.xaml;Views\SolveQuiz\QuestionSolveView.xaml;Views\SolveQuiz\QuizListToSolveView.xaml;Views\SolveQuiz\QuizResultsView.xaml;
 
-False
+True
 

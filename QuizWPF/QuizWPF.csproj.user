@@ -7,7 +7,69 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\GenerateQuiz\ChooseQuizToModifyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GenerateQuiz\GenerateQuizMenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GenerateQuiz\ModifyQuestionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GenerateQuiz\QuestionListToModifyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GenerateQuiz\QuizConfirmationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GenerateQuiz\QuizDetailsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SolveQuiz\QuestionSolveView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SolveQuiz\QuizListToSolveView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SolveQuiz\QuizResultsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\ChooseQuizToModifyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\GenerateQuizMenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\ModifyQuestionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\QuestionListToModifyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\QuizConfirmationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenerateQuiz\QuizDetailsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SolveQuiz\QuestionSolveView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SolveQuiz\QuizListToSolveView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SolveQuiz\QuizResultsView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
