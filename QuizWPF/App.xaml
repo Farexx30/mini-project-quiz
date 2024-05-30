@@ -2,8 +2,53 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:QuizWPF"
-             StartupUri="MainWindow.xaml">
+             xmlns:mainViewModel="clr-namespace:QuizWPF.ViewModels" 
+             xmlns:viewModelsGenerateQuiz="clr-namespace:QuizWPF.ViewModels.GenerateQuiz"             
+             xmlns:viewModelsSolveQuiz="clr-namespace:QuizWPF.ViewModels.SolveQuiz"             
+             xmlns:mainView="clr-namespace:QuizWPF.Views"
+             xmlns:viewsGenerateQuiz="clr-namespace:QuizWPF.Views.GenerateQuiz"
+             xmlns:viewsSolveQuiz="clr-namespace:QuizWPF.Views.SolveQuiz">
+    
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type TypeName=mainViewModel:MenuViewModel}">
+            <mainView:MenuView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:ChooseQuizToModifyViewModel}">
+            <viewsGenerateQuiz:ChooseQuizToModifyView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:GenerateQuizMenuViewModel}">
+            <viewsGenerateQuiz:GenerateQuizMenuView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:ModifyQuestionViewModel}">
+            <viewsGenerateQuiz:ModifyQuestionView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:QuizQuestionsListViewModel}">
+            <viewsGenerateQuiz:QuestionListToModifyView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:QuizConfirmationViewModel}">
+            <viewsGenerateQuiz:QuizConfirmationView/>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type TypeName=viewModelsGenerateQuiz:QuizDetailsViewModel}">
+            <viewsGenerateQuiz:QuizDetailsView/>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type TypeName=viewModelsSolveQuiz:QuestionSolveViewModel}">
+            <viewsSolveQuiz:QuestionSolveView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsSolveQuiz:QuizListToSolveViewModel}">
+            <viewsSolveQuiz:QuizListToSolveView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModelsSolveQuiz:QuizResultsViewModel}">
+            <viewsSolveQuiz:QuizResultsView/>
+        </DataTemplate>
     </Application.Resources>
+    
 </Application>

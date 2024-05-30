@@ -10,7 +10,6 @@ namespace QuizWPF.Models.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public string? Description { get; set; } //Opcjonalne
         public Category Category { get; set; }
         public List<Question> Questions { get; set; } = [];
     }
@@ -18,10 +17,13 @@ namespace QuizWPF.Models.Entities
     public enum Category
     {
         Games,
+        Anime,
         Animals,
         Math,
         Geography,
-        English,
-        Science
+        Physics,
+        Biology,
+        Chemistry,
+        English,       
     }
 }

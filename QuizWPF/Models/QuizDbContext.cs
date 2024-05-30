@@ -22,6 +22,7 @@ namespace QuizWPF.Models
                 .WithMany(q => q.Questions)
                 .HasForeignKey(q => q.QuizId);
 
+
             modelBuilder.Entity<Question>()
                 .HasMany(q => q.Answers)
                 .WithOne(a => a.Question)

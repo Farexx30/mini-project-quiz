@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="QuizWPF.Views.GenerateQuiz.GenerateQuizMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizWPF.Views.GenerateQuiz" xmlns:generatequiz="clr-namespace:QuizWPF.ViewModels.GenerateQuiz" d:DataContext="{d:DesignInstance Type=generatequiz:GenerateQuizMenuViewModel}"
+             mc:Ignorable="d" 
+           d:DesignHeight="800" d:DesignWidth="1440"
+Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="320"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="4" 
+              Background="#4BB3FD"/>
+        <Label Foreground="White" 
+             Grid.ColumnSpan="4"
+             FontSize="52" 
+             FontWeight="Bold" 
+             Padding="20,0,0,0" 
+             VerticalContentAlignment="Center"
+             Content="GENERATOR QUIZU"/>
+        <Button Grid.Column="1"
+              Grid.Row="2"
+              Background="#4BB3FD" 
+              Content="NOWY QUIZ"
+              Foreground="White"
+              FontSize="80"
+              FontWeight="Bold"
+              VerticalContentAlignment="Center"
+              BorderThickness="0"
+              Command="{Binding Path=NavigateToNewQuizGeneratorCommand}"/>
+        <Button Grid.Column="1"
+              Grid.Row="4"
+              Background="#4BB3FD" 
+              Content="MODYFIKUJ QUIZ"
+              Foreground="White"
+              FontSize="80"
+              FontWeight="Bold"
+              VerticalContentAlignment="Center"
+              BorderThickness="0"
+              Command="{Binding Path=NavigateToQuizModifierCommand}"/>
+        <Button Grid.Column="1"
+              Grid.Row="6"
+              Background="#73AF51" 
+              Content="POWRÓT"
+              Foreground="White"
+              FontSize="80"
+              FontWeight="Bold"
+              VerticalContentAlignment="Center"
+              BorderThickness="0"
+              Command="{Binding Path=NavigateToMainMenuCommand}"/>
+    </Grid>
+</UserControl>
