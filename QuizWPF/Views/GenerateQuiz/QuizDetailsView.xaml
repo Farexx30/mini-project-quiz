@@ -10,53 +10,61 @@ d:DesignHeight="800" d:DesignWidth="1440"
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="160"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
         <Border Grid.ColumnSpan="6"
-             Background="#4BB3FD">
+                Background="#4BB3FD">
+            
             <Label Foreground="White" 
-                        FontSize="52" 
-                        FontWeight="Bold" 
-                        Padding="20,0,0,0" 
-                        VerticalContentAlignment="Center"
-                        Content="GENERATOR QUIZU"/>
+                       FontSize="52" 
+                       FontWeight="Bold" 
+                       Padding="20,0,0,0" 
+                       VerticalContentAlignment="Center"
+                       Content="GENERATOR QUIZU"/>
         </Border>
+
         <Label Grid.Column="1"
-           Grid.Row="2"
-           Content="Wprowadź tytuł: "
-           FontSize="50"
-           VerticalContentAlignment="Bottom"/>
+               Grid.Row="2"
+               Content="Wprowadź tytuł: "
+               FontSize="50"
+               VerticalContentAlignment="Bottom"/>
+
         <TextBox Grid.Column="1"
-             Grid.Row="3"
-             Grid.ColumnSpan="3"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"
-             FontSize="50"
-             Text="Przykładowy tytuł quizu"/>
+                 Grid.Row="3"
+                 Grid.ColumnSpan="3"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"
+                 FontSize="50"
+                 Text="Wprowadź tytuł"
+                 Padding="5,0,0,0"
+                 MaxLength="40"/>
+
         <Label Grid.Column="1"
-           Grid.Row="4"
-           Content="Wybierz kategorię:"
-           FontSize="50"
-           VerticalContentAlignment="Bottom"/>
+               Grid.Row="4"
+               Content="Wybierz kategorię:"
+               FontSize="50"
+               VerticalContentAlignment="Bottom"/>
+
         <ComboBox Grid.Column="1"
-              Grid.ColumnSpan="3"
-              Grid.Row="5" SelectedIndex="0"
-              FontSize="50">
+                  Grid.ColumnSpan="3"
+                  Grid.Row="5" SelectedIndex="0"
+                  FontSize="50">
             <ComboBoxItem Content="Gry"/>
             <ComboBoxItem Content="Anime"/>
             <ComboBoxItem Content="Zwierzęta"/>
@@ -69,23 +77,24 @@ d:DesignHeight="800" d:DesignWidth="1440"
         </ComboBox>
 
         <Button Content="POWRÓT"
-            Grid.Column="1"
-            Grid.Row="7"
-            Background="#4BB3FD"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToPreviousCommand}"/>
+                Grid.Column="1"
+                Grid.Row="7"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToPreviousCommand}"/>
+
         <Button Content="DALEJ"
-            Grid.Column="3"
-            Grid.Row="7"
-            Background="#4BB3FD"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToQuestionListCommand}"/>
+                Grid.Column="3"
+                Grid.Row="7"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToQuestionListCommand}"/>
 
     </Grid>
 </UserControl>

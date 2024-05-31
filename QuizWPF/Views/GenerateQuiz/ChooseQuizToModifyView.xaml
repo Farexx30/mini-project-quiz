@@ -10,48 +10,53 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="320"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="160"/>
-            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <Border Grid.ColumnSpan="5"
-            Background="#4BB3FD">
+                Background="#4BB3FD">
+            
             <Label Foreground="White" 
-           FontSize="52" 
-           FontWeight="Bold" 
-           Padding="20,0,0,0" 
-           VerticalContentAlignment="Center"
-           Content="GENERATOR QUIZU"/>
+                   FontSize="52" 
+                   FontWeight="Bold" 
+                   Padding="20,0,0,0" 
+                   VerticalContentAlignment="Center"
+                   Content="GENERATOR QUIZU"/>
         </Border>
+        
         <Border Grid.Column="1"
             Grid.ColumnSpan="3"
             Grid.Row="2"
             Background="#4BB3FD">
+            
             <Label Content="Wybierz quiz do modyfikacji"
-               Foreground="White"
-               FontSize="52"
-               FontWeight="Bold"
-               VerticalContentAlignment="Center"
-               HorizontalContentAlignment="Center"/>
+                   Foreground="White"
+                   FontSize="52"
+                   FontWeight="Bold"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"/>
         </Border>
+        
         <Border Grid.Column="1"
-            Grid.ColumnSpan="3"
-            Grid.Row="3"
-            Background="#E5F4FF"
-            BorderBrush="#4BB3FD"
-            BorderThickness="4">
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                Background="#E5F4FF"
+                BorderBrush="#4BB3FD"
+                BorderThickness="4">
+            
             <ListBox Grid.Column="1" 
                      Grid.Row="3"  
                      Background="Transparent"
@@ -64,22 +69,24 @@
         </Border>
 
         <Button Content="POWRÓT"
-            Grid.Column="1"
-            Grid.Row="5"
-            Background="#4BB3FD"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToGenerateQuizMenuCommand}"/>
+                Grid.Column="1"
+                Grid.Row="5"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToGenerateQuizMenuCommand}"/>
+        
         <Button Content="MODYFIKUJ"
-            Grid.Column="3"
-            Grid.Row="5"
-            Background="#4BB3FD"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToQuizDetailsCommand}"/>
+                Grid.Column="3"
+                Grid.Row="5"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToQuizDetailsCommand}"/>
+        
     </Grid>
 </UserControl>

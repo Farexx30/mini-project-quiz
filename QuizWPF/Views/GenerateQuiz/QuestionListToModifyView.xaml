@@ -10,51 +10,55 @@ d:DesignHeight="800" d:DesignWidth="1440"
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="240"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="12*"/>
             <RowDefinition Height="0"/>
-            <RowDefinition Height="160"/>
-            <RowDefinition/>
-            <RowDefinition Height="40"/>
-            
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <Border Grid.ColumnSpan="6"
-        Background="#4BB3FD">
+                Background="#4BB3FD">
+            
             <Label Foreground="White" 
-       FontSize="52" 
-       FontWeight="Bold" 
-       Padding="20,0,0,0" 
-       VerticalContentAlignment="Center"
-       Content="GENERATOR QUIZU"/>
+                   FontSize="52" 
+                   FontWeight="Bold" 
+                   Padding="20,0,0,0" 
+                   VerticalContentAlignment="Center"
+                   Content="GENERATOR QUIZU"/>
         </Border>
+
         <Border Grid.Column="1"
-        Grid.ColumnSpan="4"
-        Grid.Row="2"
-        Background="#4BB3FD">
+                Grid.ColumnSpan="4"
+                Grid.Row="2"
+                Background="#4BB3FD">
+            
             <Label Content="Pytania"
-           Foreground="White"
-           FontSize="52"
-           FontWeight="Bold"
-           VerticalContentAlignment="Center"
-           HorizontalContentAlignment="Center"/>
+                    Foreground="White"
+                    FontSize="52"
+                    FontWeight="Bold"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
         </Border>
+
         <Border Grid.Column="1"
-        Grid.ColumnSpan="4"
-        Grid.Row="3"
-        Background="#E5F4FF"
-        BorderBrush="#4BB3FD"
-        BorderThickness="4">
+                Grid.ColumnSpan="4"
+                Grid.Row="3"
+                Background="#E5F4FF"
+                BorderBrush="#4BB3FD"
+                BorderThickness="4">
+            
             <ListBox Grid.Column="1" 
                  Grid.Row="3"  
                  Background="Transparent"
@@ -67,48 +71,48 @@ d:DesignHeight="800" d:DesignWidth="1440"
         </Border>
 
         <Button Content="POWRÓT"
-        Grid.Column="1"
-        Grid.Row="5"
-        Background="#4BB3FD"
-        Foreground="White"
-        FontSize="60"
-        BorderThickness="0"
-        Margin="20"
-        FontWeight="Bold"
-        Command="{Binding Path=NavigateToQuizDetailsCommand}"/>
-        
+                Grid.Column="1"
+                Grid.Row="5"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="60"
+                BorderThickness="0"
+                Margin="20"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToQuizDetailsCommand}"/>
+
         <Button Content="USUŃ"
-        Grid.Column="2"
-        Grid.Row="5"
-        Background="IndianRed"
-        Foreground="White"
-        FontSize="60"
-        BorderThickness="0"
-        Margin="20"
-        FontWeight="Bold"
-        Command="{Binding Path=DeleteQuestionCommand}"/>
-        
+                Grid.Column="2"
+                Grid.Row="5"
+                Background="IndianRed"
+                Foreground="White"
+                FontSize="60"
+                BorderThickness="0"
+                Margin="20"
+                FontWeight="Bold"
+                Command="{Binding Path=DeleteQuestionCommand}"/>
+
         <Button Content="DODAJ"
-        Grid.Column="3"
-        Grid.Row="5"
-        Background="MediumSeaGreen"
-        Foreground="White"
-        FontSize="60"
-        BorderThickness="0"
-        Margin="20"
-        FontWeight="Bold"
-        Command="{Binding Path=NavigateToNewQuestionCreatorCommand}"/>
-        
+                Grid.Column="3"
+                Grid.Row="5"
+                Background="MediumSeaGreen"
+                Foreground="White"
+                FontSize="60"
+                BorderThickness="0"
+                Margin="20"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToNewQuestionCreatorCommand}"/>
+
         <Button Content="EDYTUJ"
-        Grid.Column="4"
-        Grid.Row="5"
-        Background="#4BB3FD"
-        Foreground="White"
-        FontSize="60"
-        BorderThickness="0"
-        Margin="20"
-        FontWeight="Bold"
-        Command="{Binding Path=NavigateToExistingQuestionModifierCommand}"/>
+                Grid.Column="4"
+                Grid.Row="5"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="60"
+                BorderThickness="0"
+                Margin="20"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToExistingQuestionModifierCommand}"/>
 
         <Button Content="ZAPISZ"
                  Grid.Column="2"
@@ -120,6 +124,6 @@ d:DesignHeight="800" d:DesignWidth="1440"
                  BorderThickness="0"
                  Margin="20"
                  FontWeight="Bold"
-                 Command="{Binding Path=SaveQuizCommand}"/>        
+                 Command="{Binding Path=SaveQuizCommand}"/>
     </Grid>
 </UserControl>
