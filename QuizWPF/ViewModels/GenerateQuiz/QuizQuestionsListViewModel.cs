@@ -84,6 +84,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         public void SetMode(Mode mode) => _mode = mode;
 
 
+        //I TU JESZCZE IMPLEMENTACJA DLA MODYFIKACJI QUIZÓW:
         private void NavigateToQuizDetails(object obj)
         {
             NavigationService.NavigateTo<QuizDetailsViewModel>(_mode);
@@ -95,9 +96,11 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         {
             if (SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
             {
-                QuizQuestions.First().Value = "HAHAHA";
                 _sharedDataService.CurrentQuizDto.Questions.Remove(SelectedQuestion);
                 QuizQuestions.Remove(SelectedQuestion);
+
+                //NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode); //Ale tylko to mi sie wydaje takie trochę niepoprawne.
+                QuestionDto.QuestionNumber = 1; //Poprawic logike wypisywania sie "Pytanie 1", "Pytanie 2"... po usunieciu.
 
                 MessageBox.Show("Usuwam pytanie...");
             }           
@@ -108,26 +111,26 @@ namespace QuizWPF.ViewModels.GenerateQuiz
              //byc moze jakas logika jeszcze...
              MessageBox.Show("Dodaje pytanie...");
 
-             NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
+            var newQuestionDto = new QuestionDto();
+            QuizQuestions.Add(newQuestionDto);
+            _sharedDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
+            _sharedDataService.CurrentQuestionDto = newQuestionDto;
 
-             var newQuestionDto = new QuestionDto();
-             QuizQuestions.Add(newQuestionDto);
-             _sharedDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
-             _sharedDataService.CurrentQuestionDto = newQuestionDto;
+            NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
 
              QuestionDto.QuestionNumber = 1;         
         }
 
         private void ModifyExistingQuestion(object obj)
         {
-            //byc moze jakas logika
+            //byc moze jakas logika...
             if(SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
             {
                 MessageBox.Show("Modyfikuje pytanie...");
 
-                NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
-
                 _sharedDataService.CurrentQuestionDto = SelectedQuestion;
+
+                NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
 
                 QuestionDto.QuestionNumber = 1;
             }
