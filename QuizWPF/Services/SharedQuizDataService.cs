@@ -23,7 +23,6 @@ namespace QuizWPF.Services
 
         public void ClearCurrentQuizData()
         {
-            CurrentQuizDto.Id = 0;
             CurrentQuizDto.Name = string.Empty;
             CurrentQuizDto.Category = Category.Games;
             CurrentQuizDto.Questions.Clear();
