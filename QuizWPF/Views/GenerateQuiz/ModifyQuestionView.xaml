@@ -10,167 +10,183 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="160"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-
         <Border Grid.ColumnSpan="6"
-     Background="#4BB3FD">
+                Background="#4BB3FD">
+            
             <Label Foreground="White" 
-                FontSize="52" 
-                FontWeight="Bold" 
-                Padding="20,0,0,0" 
-                VerticalContentAlignment="Center"
-                Content="GENERATOR QUIZU"/>
+                    FontSize="52" 
+                    FontWeight="Bold" 
+                    Padding="20,0,0,0" 
+                    VerticalContentAlignment="Center"
+                    Content="GENERATOR QUIZU"/>
         </Border>
+
         <Label Grid.Row="2"
-           Content="Treść pytania:"
-           FontSize="36"
-           VerticalContentAlignment="Center"/>
+               Content="Treść pytania:"
+               FontSize="36"
+               VerticalContentAlignment="Center"/>
+
         <TextBox Grid.Row="2"
-             Grid.Column="1"
-             Grid.ColumnSpan="5"
-             Margin="5,0,10,0"
-             Text="Przykładowa treść pytania"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             FontSize="32"
-             VerticalContentAlignment="Center"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+                 Grid.Column="1"
+                 Grid.ColumnSpan="5"
+                 Margin="5,0,10,0"
+                 Text="Przykładowa treść pytania"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"/>
+
         <Label Grid.Row="3"
-           Grid.Column="1"
-           Grid.ColumnSpan="4"
-           Content="Prawidłowe odpowiedzi: "
-           VerticalContentAlignment="Center"
-           HorizontalContentAlignment="Right"
-           FontSize="36"/>
+               Grid.Column="1"
+               Grid.ColumnSpan="4"
+               Content="Prawidłowe odpowiedzi: "
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Right"
+               FontSize="36"/>
+
         <Label Grid.Row="4"
-           Content="Odpowiedź A:"
-           FontSize="36"
-           VerticalContentAlignment="Center"/>
+               Content="Odpowiedź A:"
+               FontSize="36"
+               VerticalContentAlignment="Center"/>
+
         <TextBox Grid.Row="4"
-             Grid.Column="1"
-             Grid.ColumnSpan="2"
-             Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             FontSize="32"
-             VerticalContentAlignment="Center"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="5,0,0,0"
+                 Text="______________________________________________________________________"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"/>
+
         <CheckBox Grid.Row="4"
-              Grid.Column="4"
-              BorderBrush="#4BB3FD"
-              BorderThickness="1"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+                  Grid.Column="4"
+                  BorderBrush="#4BB3FD"
+                  BorderThickness="1"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
+
         <Label Grid.Row="6"
-           Content="Odpowiedź B:"
-           FontSize="36"
-           VerticalContentAlignment="Center"/>
+               Content="Odpowiedź B:"
+               FontSize="36"
+               VerticalContentAlignment="Center"/>
+
         <TextBox Grid.Row="6"
-             Grid.Column="1"
-             Grid.ColumnSpan="2"
-             Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             FontSize="32"
-             VerticalContentAlignment="Center"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="5,0,0,0"
+                 Text="Przykładowa treść odpowiedzi"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"/>
+
         <CheckBox Grid.Row="6"
-              Grid.Column="4"
-              BorderBrush="#4BB3FD"
-              BorderThickness="1"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+                  Grid.Column="4"
+                  BorderBrush="#4BB3FD"
+                  BorderThickness="1"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
+
         <Label Grid.Row="8"
-           Content="Odpowiedź C:"
-           FontSize="36"
-           VerticalContentAlignment="Center"/>
+               Content="Odpowiedź C:"
+               FontSize="36"
+               VerticalContentAlignment="Center"/>
+
         <TextBox Grid.Row="8"
-             Grid.Column="1"
-             Grid.ColumnSpan="2"
-             Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             FontSize="32"
-             VerticalContentAlignment="Center"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="5,0,0,0"
+                 Text="Przykładowa treść odpowiedzi"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"/>
+
         <CheckBox Grid.Row="8"
-              Grid.Column="4"
-              BorderBrush="#4BB3FD"
-              BorderThickness="1"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+                  Grid.Column="4"
+                  BorderBrush="#4BB3FD"
+                  BorderThickness="1"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
+
         <Label Grid.Row="10"
-           Content="Odpowiedź D:"
-           FontSize="36"
-           VerticalContentAlignment="Center"/>
+               Content="Odpowiedź D:"
+               FontSize="36"
+               VerticalContentAlignment="Center"/>
+
         <TextBox Grid.Row="10"
-             Grid.Column="1"
-             Grid.ColumnSpan="2"
-             Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             FontSize="32"
-             VerticalContentAlignment="Center"
-             BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="5,0,0,0"
+                 Text="Przykładowa treść odpowiedzi"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 BorderBrush="#4BB3FD"
+                 BorderThickness="4"/>
+
         <CheckBox Grid.Row="10"
-              Grid.Column="4"
-              BorderBrush="#4BB3FD"
-              BorderThickness="1"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+                  Grid.Column="4"
+                  BorderBrush="#4BB3FD"
+                  BorderThickness="1"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
+
         <Button Content="DALEJ"
-            Grid.Column="2"
-            Grid.Row="12"
-            Grid.ColumnSpan="3"
-            Background="#4BB3FD"
-            Foreground="White"
-            FontSize="50"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToQuizQuestionsListCommand}"/>
+                Grid.Column="2"
+                Grid.Row="12"
+                Grid.ColumnSpan="3"
+                Background="#4BB3FD"
+                Foreground="White"
+                FontSize="50"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToQuizQuestionsListCommand}"/>
 
     </Grid>
 </UserControl>

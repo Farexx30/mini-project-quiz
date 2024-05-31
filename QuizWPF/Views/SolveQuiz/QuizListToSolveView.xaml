@@ -5,47 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuizWPF.Views.SolveQuiz" xmlns:solvequiz="clr-namespace:QuizWPF.ViewModels.SolveQuiz" d:DataContext="{d:DesignInstance Type=solvequiz:QuizListToSolveViewModel}"
              mc:Ignorable="d" 
-d:DesignHeight="800" d:DesignWidth="1440"
-         Background="White">
+             d:DesignHeight="800" d:DesignWidth="1440"
+             Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="320"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="160"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Border Grid.ColumnSpan="5"
-    Background="#F5A02F">
+                Background="#F5A02F">
+            
             <Label Foreground="White" 
-               FontSize="52" 
-               FontWeight="Bold" 
-               Padding="20,0,0,0" 
-               VerticalContentAlignment="Center"
-               Content="ROZWIĄZYWANIE QUIZU"/>
+                   FontSize="52" 
+                   FontWeight="Bold" 
+                   Padding="20,0,0,0" 
+                   VerticalContentAlignment="Center"
+                   Content="ROZWIĄZYWANIE QUIZU"/>
         </Border>
+
         <Label Grid.Column="1"
-           Grid.Row="2"
-           Content="Wybierz kategorię: "
-           FontSize="50"
-           VerticalContentAlignment="Bottom"/>
+               Grid.Row="2"
+               Content="Wybierz kategorię: "
+               FontSize="50"
+               VerticalContentAlignment="Bottom"/>
+
         <ComboBox Grid.Column="2"
-              Grid.ColumnSpan="2"
-              Grid.Row="2" 
-              SelectedIndex="0"
-              FontSize="50">
+                  Grid.ColumnSpan="2"
+                  Grid.Row="2" 
+                  SelectedIndex="0"
+                  FontSize="50">
             <ComboBoxItem Content="---"/>
             <ComboBoxItem Content="Gry"/>
             <ComboBoxItem Content="Zwierzęta"/>
@@ -54,52 +57,57 @@ d:DesignHeight="800" d:DesignWidth="1440"
             <ComboBoxItem Content="Angielski"/>
             <ComboBoxItem Content="Fizyka"/>
         </ComboBox>
+
         <Border Grid.Column="1"
-            Grid.ColumnSpan="3"
-            Grid.Row="4"
-            Background="#F5A02F">
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                Background="#F5A02F">
+            
             <Label Content="Wybierz quiz do rozwiązania"
-               Foreground="White"
-               FontSize="52"
-               FontWeight="Bold"
-               VerticalContentAlignment="Center"
-               HorizontalContentAlignment="Center"/>
+                   Foreground="White"
+                   FontSize="52"
+                   FontWeight="Bold"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"/>
         </Border>
+
         <Border Grid.Column="1"
-        Grid.ColumnSpan="3"
-        Grid.Row="5"
-        Background="#FEF5E8"
-        BorderBrush="#F5A02F"
-        BorderThickness="4">
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                Background="#FEF5E8"
+                BorderBrush="#F5A02F"
+                BorderThickness="4">
+            
             <ListBox Grid.Column="1" 
-             Grid.Row="3"  
-             Background="Transparent"
-             Grid.ColumnSpan="3"
-             FontSize="52"
-             BorderThickness="0"
-             ScrollViewer.VerticalScrollBarVisibility="Auto"
-             ScrollViewer.HorizontalScrollBarVisibility="Auto"
-             d:ItemsSource="{d:SampleData ItemCount=6}"/>
+                     Grid.Row="3"  
+                     Padding="5"
+                     Background="Transparent"
+                     Grid.ColumnSpan="3"
+                     FontSize="52"
+                     BorderThickness="0"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                     d:ItemsSource="{d:SampleData ItemCount=6}"/>
         </Border>
 
         <Button Content="POWRÓT"
-            Grid.Column="1"
-            Grid.Row="7"
-            Background="#F5A02F"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToMainMenuCommand}"/>
-        
+                Grid.Column="1"
+                Grid.Row="7"
+                Background="#F5A02F"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToMainMenuCommand}"/>
+
         <Button Content="PRZEJDŹ"
-            Grid.Column="3"
-            Grid.Row="7"
-            Background="#F5A02F"
-            Foreground="White"
-            FontSize="70"
-            BorderThickness="0"
-            FontWeight="Bold"
-            Command="{Binding Path=NavigateToSelectedQuizCommand}"/>
+                Grid.Column="3"
+                Grid.Row="7"
+                Background="#F5A02F"
+                Foreground="White"
+                FontSize="70"
+                BorderThickness="0"
+                FontWeight="Bold"
+                Command="{Binding Path=NavigateToSelectedQuizCommand}"/>
     </Grid>
 </UserControl>

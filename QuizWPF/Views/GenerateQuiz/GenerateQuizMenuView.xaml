@@ -10,59 +10,63 @@ Background="White">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="320"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="160"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="160"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="160"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
             <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <Border Grid.ColumnSpan="4" 
-              Background="#4BB3FD"/>
+                Background="#4BB3FD"/>
+        
         <Label Foreground="White" 
-             Grid.ColumnSpan="4"
-             FontSize="52" 
-             FontWeight="Bold" 
-             Padding="20,0,0,0" 
-             VerticalContentAlignment="Center"
-             Content="GENERATOR QUIZU"/>
+                 Grid.ColumnSpan="4"
+                 FontSize="52" 
+                 FontWeight="Bold" 
+                 Padding="20,0,0,0" 
+                 VerticalContentAlignment="Center"
+                 Content="GENERATOR QUIZU"/>
+        
         <Button Grid.Column="1"
-              Grid.Row="2"
-              Background="#4BB3FD" 
-              Content="NOWY QUIZ"
-              Foreground="White"
-              FontSize="80"
-              FontWeight="Bold"
-              VerticalContentAlignment="Center"
-              BorderThickness="0"
-              Command="{Binding Path=NavigateToNewQuizGeneratorCommand}"/>
+                  Grid.Row="2"
+                  Background="#4BB3FD" 
+                  Content="NOWY QUIZ"
+                  Foreground="White"
+                  FontSize="80"
+                  FontWeight="Bold"
+                  VerticalContentAlignment="Center"
+                  BorderThickness="0"
+                  Command="{Binding Path=NavigateToNewQuizGeneratorCommand}"/>
+        
         <Button Grid.Column="1"
-              Grid.Row="4"
-              Background="#4BB3FD" 
-              Content="MODYFIKUJ QUIZ"
-              Foreground="White"
-              FontSize="80"
-              FontWeight="Bold"
-              VerticalContentAlignment="Center"
-              BorderThickness="0"
-              Command="{Binding Path=NavigateToQuizModifierCommand}"/>
+                  Grid.Row="4"
+                  Background="#4BB3FD" 
+                  Content="MODYFIKUJ QUIZ"
+                  Foreground="White"
+                  FontSize="80"
+                  FontWeight="Bold"
+                  VerticalContentAlignment="Center"
+                  BorderThickness="0"
+                  Command="{Binding Path=NavigateToQuizModifierCommand}"/>
+        
         <Button Grid.Column="1"
-              Grid.Row="6"
-              Background="#73AF51" 
-              Content="POWRÓT"
-              Foreground="White"
-              FontSize="80"
-              FontWeight="Bold"
-              VerticalContentAlignment="Center"
-              BorderThickness="0"
-              Command="{Binding Path=NavigateToMainMenuCommand}"/>
+                  Grid.Row="6"
+                  Background="#73AF51" 
+                  Content="POWRÓT"
+                  Foreground="White"
+                  FontSize="80"
+                  FontWeight="Bold"
+                  VerticalContentAlignment="Center"
+                  BorderThickness="0"
+                  Command="{Binding Path=NavigateToMainMenuCommand}"/>
     </Grid>
 </UserControl>
