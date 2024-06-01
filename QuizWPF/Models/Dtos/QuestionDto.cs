@@ -14,11 +14,7 @@ namespace QuizWPF.Models.Dtos
         public string Value { get; set; } = string.Empty;
         public List<AnswerDto> Answers { get; set; } = [new AnswerDto(), new AnswerDto(), new AnswerDto(), new AnswerDto()];
 
-        public static uint QuestionNumber { private get; set; } = 1;
-        public override string ToString()
-        {
-            return $"Pytanie {QuestionNumber++}";
-        }
+        public override string ToString() => Value;
 
         public override bool Equals(object? obj)
         {
