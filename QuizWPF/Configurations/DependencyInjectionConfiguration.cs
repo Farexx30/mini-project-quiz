@@ -30,11 +30,16 @@ namespace QuizWPF.Configurations
 
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
+            //Register DbContext:
             services.AddDbContext<QuizDbContext>(
                 option => option.UseSqlServer(ConfigurationManager.ConnectionStrings["mainDatabase"].ConnectionString));
 
+            //Register services:
             services.AddSingleton<INavigationService, NavigationService>();
+            services.AddScoped<ISharedQuizDataService, SharedQuizDataService>();
+            services.AddScoped<IQuizRepositoryService, QuizRepositoryService>();
 
+            //Register ViewModels with navigation Func
             services.AddSingleton<Func<Type, ViewModelBase>>(provider =>
                 viewModelType => (ViewModelBase)provider.GetRequiredService(viewModelType));
 
