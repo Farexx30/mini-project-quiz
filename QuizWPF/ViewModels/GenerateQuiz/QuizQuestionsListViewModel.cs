@@ -88,8 +88,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         private void NavigateToQuizDetails(object obj)
         {
             NavigationService.NavigateTo<QuizDetailsViewModel>(_mode);
-
-            QuestionDto.QuestionNumber = 1;
         }
         
         private void DeleteQuestion(object obj)
@@ -99,9 +97,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
                 _sharedDataService.CurrentQuizDto.Questions.Remove(SelectedQuestion);
                 QuizQuestions.Remove(SelectedQuestion);
 
-                //NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode); //Ale tylko to mi sie wydaje takie trochę niepoprawne.
-                QuestionDto.QuestionNumber = 1; //Poprawic logike wypisywania sie "Pytanie 1", "Pytanie 2"... po usunieciu.
-
                 MessageBox.Show("Usuwam pytanie...");
             }           
         }
@@ -109,16 +104,14 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         private void AddNewQuestion(object obj)
         {
              //byc moze jakas logika jeszcze...
-             MessageBox.Show("Dodaje pytanie...");
+            MessageBox.Show("Dodaje pytanie...");
 
             var newQuestionDto = new QuestionDto();
             QuizQuestions.Add(newQuestionDto);
             _sharedDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
             _sharedDataService.CurrentQuestionDto = newQuestionDto;
 
-            NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
-
-             QuestionDto.QuestionNumber = 1;         
+            NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);       
         }
 
         private void ModifyExistingQuestion(object obj)
@@ -131,10 +124,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
                 _sharedDataService.CurrentQuestionDto = SelectedQuestion;
 
                 NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
-
-                QuestionDto.QuestionNumber = 1;
-            }
-           
+            }          
         }
 
         private void SaveQuiz(object obj)
@@ -149,8 +139,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             }
 
             NavigationService.NavigateTo<QuizConfirmationViewModel>(_mode);
-
-            QuestionDto.QuestionNumber = 1;
         }
     }
 
