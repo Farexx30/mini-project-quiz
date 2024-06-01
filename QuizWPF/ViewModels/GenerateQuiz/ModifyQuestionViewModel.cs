@@ -26,6 +26,8 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             }
         }
 
+
+        //Bindings:
         private string _questionValue = null!;
         public string QuestionValue
         {
@@ -140,22 +142,15 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         private void Initialize()
         {
-            if (_mode == Mode.Add)
-            {
-                QuestionValue = _sharedQuizDataService.CurrentQuestionDto!.Value;
-                AnswerAValue = _sharedQuizDataService.CurrentQuestionDto.Answers[0].Value;
-                AnswerBValue = _sharedQuizDataService.CurrentQuestionDto.Answers[1].Value;
-                AnswerCValue = _sharedQuizDataService.CurrentQuestionDto.Answers[2].Value;
-                AnswerDValue = _sharedQuizDataService.CurrentQuestionDto.Answers[3].Value;
-                IsASelected = _sharedQuizDataService.CurrentQuestionDto.Answers[0].IsCorrect;
-                IsBSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[1].IsCorrect;
-                IsCSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[2].IsCorrect;
-                IsDSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[3].IsCorrect;
-            }
-            else
-            {
-                    //??? Dla Mode.Modify (wiekszy problem).
-            }
+            QuestionValue = _sharedQuizDataService.CurrentQuestionDto!.Value;
+            AnswerAValue = _sharedQuizDataService.CurrentQuestionDto.Answers[0].Value;
+            AnswerBValue = _sharedQuizDataService.CurrentQuestionDto.Answers[1].Value;
+            AnswerCValue = _sharedQuizDataService.CurrentQuestionDto.Answers[2].Value;
+            AnswerDValue = _sharedQuizDataService.CurrentQuestionDto.Answers[3].Value;
+            IsASelected = _sharedQuizDataService.CurrentQuestionDto.Answers[0].IsCorrect;
+            IsBSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[1].IsCorrect;
+            IsCSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[2].IsCorrect;
+            IsDSelected = _sharedQuizDataService.CurrentQuestionDto.Answers[3].IsCorrect;
         }
 
         public void SetMode(Mode mode) => _mode = mode;

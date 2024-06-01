@@ -65,7 +65,8 @@
                      BorderThickness="0"
                      ScrollViewer.VerticalScrollBarVisibility="Auto"
                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                     d:ItemsSource="{d:SampleData ItemCount=6}"/>
+                     ItemsSource="{Binding AllQuizzes}"
+                     SelectedItem="{Binding SelectedQuiz}"/>
         </Border>
 
         <Button Content="POWRÓT"

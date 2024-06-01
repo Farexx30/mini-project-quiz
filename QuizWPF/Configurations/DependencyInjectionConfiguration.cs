@@ -34,6 +34,8 @@ namespace QuizWPF.Configurations
             services.AddDbContext<QuizDbContext>(
                 option => option.UseSqlServer(ConfigurationManager.ConnectionStrings["mainDatabase"].ConnectionString));
 
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             //Register services:
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddScoped<ISharedQuizDataService, SharedQuizDataService>();

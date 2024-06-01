@@ -13,5 +13,7 @@ namespace QuizWPF.Models.Dtos
         public string Name { get; set; } = null!;
         public Category Category { get; set; }
         public List<QuestionDto> Questions { get; set; } = [];
+
+        public override string ToString() => Name;
     }
 }
