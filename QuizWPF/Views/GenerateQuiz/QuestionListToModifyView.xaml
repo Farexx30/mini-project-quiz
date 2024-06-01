@@ -67,7 +67,9 @@ d:DesignHeight="800" d:DesignWidth="1440"
                  BorderThickness="0"
                  ScrollViewer.VerticalScrollBarVisibility="Auto"
                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                 d:ItemsSource="{d:SampleData ItemCount=6}"/>
+                 ItemsSource="{Binding QuizQuestions}"
+                 SelectedItem="{Binding SelectedQuestion}"/>
+
         </Border>
 
         <Button Content="POWRÓT"

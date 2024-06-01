@@ -51,11 +51,10 @@ d:DesignHeight="800" d:DesignWidth="1440"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
                  FontSize="50"
-                 Text="Wprowadź tytuł"
+                 Text="{Binding QuizTitle}"
                  Padding="5,0,0,0"
                  MaxLength="40"/>
-
-        <Label Grid.Column="1"
+            <Label Grid.Column="1"
                Grid.Row="4"
                Content="Wybierz kategorię:"
                FontSize="50"
@@ -63,8 +62,9 @@ d:DesignHeight="800" d:DesignWidth="1440"
 
         <ComboBox Grid.Column="1"
                   Grid.ColumnSpan="3"
-                  Grid.Row="5" SelectedIndex="0"
-                  FontSize="50">
+                  Grid.Row="5" 
+                  FontSize="50"
+                  SelectedIndex="{Binding QuizCategory}">
             <ComboBoxItem Content="Gry"/>
             <ComboBoxItem Content="Anime"/>
             <ComboBoxItem Content="Zwierzęta"/>
@@ -94,7 +94,7 @@ d:DesignHeight="800" d:DesignWidth="1440"
                 FontSize="70"
                 BorderThickness="0"
                 FontWeight="Bold"
-                Command="{Binding Path=NavigateToQuestionListCommand}"/>
+                Command="{Binding Path=NextButtonClickCommand}"/>
 
     </Grid>
 </UserControl>
