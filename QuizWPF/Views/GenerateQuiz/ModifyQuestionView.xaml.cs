@@ -24,5 +24,6 @@ namespace QuizWPF.Views.GenerateQuiz
         {
             InitializeComponent();
         }
+
     }
 }
