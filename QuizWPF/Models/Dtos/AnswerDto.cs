@@ -9,7 +9,6 @@ namespace QuizWPF.Models.Dtos
 {
     public class AnswerDto
     {
-        public int Id { get; set; }
         public string Value { get; set; } = string.Empty;
         public bool IsCorrect { get; set; }
     }

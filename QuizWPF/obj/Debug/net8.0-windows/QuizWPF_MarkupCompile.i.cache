@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\obj\Debug\net8.0-windows\
+C:\Users\Łukasz\Documents\Studia\Programowanie obiektowe i graficzne\QuizWPF\QuizWPF\obj\Debug\net8.0-windows\
 QuizWPF
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\App.xaml
+C:\Users\Łukasz\Documents\Studia\Programowanie obiektowe i graficzne\QuizWPF\QuizWPF\App.xaml
 11425843366
 
-47-59360890
-258-989381725
+4866799112
+259-1945425709
 MainWindow.xaml;Views\GenerateQuiz\ChooseQuizToModifyView.xaml;Views\GenerateQuiz\GenerateQuizMenuView.xaml;Views\GenerateQuiz\ModifyQuestionView.xaml;Views\GenerateQuiz\QuestionListToModifyView.xaml;Views\GenerateQuiz\QuizConfirmationView.xaml;Views\GenerateQuiz\QuizDetailsView.xaml;Views\MenuView.xaml;Views\SolveQuiz\QuestionSolveView.xaml;Views\SolveQuiz\QuizListToSolveView.xaml;Views\SolveQuiz\QuizResultsView.xaml;
 
 False

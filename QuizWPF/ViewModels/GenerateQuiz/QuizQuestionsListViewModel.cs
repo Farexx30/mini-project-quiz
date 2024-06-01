@@ -14,7 +14,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 {
     public class QuizQuestionsListViewModel : ViewModelBase
     {
-        private readonly ISharedQuizDataService _sharedDataService;
+        private readonly ISharedQuizDataService _sharedQuizDataService;
         private readonly IQuizRepositoryService _quizRepositoryService;
         private Mode _mode;
 
@@ -62,7 +62,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         public QuizQuestionsListViewModel(INavigationService navigationService, ISharedQuizDataService sharedQuizDataService, IQuizRepositoryService quizRepositoryService)
         {
             _navigationService = navigationService;
-            _sharedDataService = sharedQuizDataService;
+            _sharedQuizDataService = sharedQuizDataService;
             _quizRepositoryService = quizRepositoryService;           
 
             NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, o => true);
@@ -77,7 +77,8 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //Initializing:
         private void Initialize()
         {
-            QuizQuestions = new(_sharedDataService.CurrentQuizDto.Questions);
+            _sharedQuizDataService.CurrentQuestionDto = null;
+            QuizQuestions = new(_sharedQuizDataService.CurrentQuizDto.Questions);
         }
 
 
@@ -87,6 +88,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //I TU JESZCZE IMPLEMENTACJA DLA MODYFIKACJI QUIZÓW:
         private void NavigateToQuizDetails(object obj)
         {
+            _sharedQuizDataService.CurrentQuestionDto = null;
             NavigationService.NavigateTo<QuizDetailsViewModel>(_mode);
         }
         
@@ -94,34 +96,31 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         {
             if (SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
             {
-                _sharedDataService.CurrentQuizDto.Questions.Remove(SelectedQuestion);
+                _sharedQuizDataService.CurrentQuizDto.Questions.Remove(SelectedQuestion);
                 QuizQuestions.Remove(SelectedQuestion);
-
-                MessageBox.Show("Usuwam pytanie...");
+                _sharedQuizDataService.CurrentQuestionDto = null;
             }           
         }
 
         private void AddNewQuestion(object obj)
         {
-             //byc moze jakas logika jeszcze...
-            MessageBox.Show("Dodaje pytanie...");
-
-            var newQuestionDto = new QuestionDto();
+            //byc moze jakas logika jeszcze...
+            var newQuestionDto = new QuestionDto()
+            {
+                QuizId = _sharedQuizDataService.CurrentQuizDto.Id
+            };
             QuizQuestions.Add(newQuestionDto);
-            _sharedDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
-            _sharedDataService.CurrentQuestionDto = newQuestionDto;
+            _sharedQuizDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
+            _sharedQuizDataService.CurrentQuestionDto = newQuestionDto;
 
             NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);       
         }
 
         private void ModifyExistingQuestion(object obj)
         {
-            //byc moze jakas logika...
-            if(SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
+            if (SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
             {
-                MessageBox.Show("Modyfikuje pytanie...");
-
-                _sharedDataService.CurrentQuestionDto = SelectedQuestion;
+                _sharedQuizDataService.CurrentQuestionDto = SelectedQuestion;
 
                 NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
             }          
@@ -131,12 +130,14 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         {
             if (_mode == Mode.Add)
             {
-                MessageBox.Show("Wygenerowano nowy quiz");
+                _quizRepositoryService.AddNewQuiz(_sharedQuizDataService.CurrentQuizDto);
             }
             else
             {
-                MessageBox.Show("Zaktualizowano quiz");
+                _quizRepositoryService.UpdateExistingQuiz(_sharedQuizDataService.CurrentQuizDto);
             }
+           
+            _sharedQuizDataService.ClearCurrentQuizData();
 
             NavigationService.NavigateTo<QuizConfirmationViewModel>(_mode);
         }

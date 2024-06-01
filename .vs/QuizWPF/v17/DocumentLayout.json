@@ -1,54 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\questionlisttomodifyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\questionlisttomodifyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\services\\quizrepositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\services\\quizrepositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\quizdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\quizdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\viewmodels\\generatequiz\\quizquestionslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\viewmodels\\generatequiz\\quizquestionslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\modifyquestionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\modifyquestionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\viewmodels\\generatequiz\\quizdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\viewmodels\\generatequiz\\quizdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|d:\\studia\\semestr 4\\programowanie obiektowe i graficzne\\quiz\\quizwpf\\models\\entities\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\models\\entities\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\viewmodels\\generatequiz\\choosequiztomodifyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\viewmodels\\generatequiz\\choosequiztomodifyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|d:\\studia\\semestr 4\\programowanie obiektowe i graficzne\\quiz\\quizwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\services\\sharedquizdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\services\\sharedquizdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\choosequiztomodifyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\choosequiztomodifyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\generatequizmenuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\generatequizmenuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\generatequiz\\quizconfirmationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\generatequiz\\quizconfirmationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\solvequiz\\questionsolveview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\solvequiz\\questionsolveview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\quizwpf\\views\\solvequiz\\quizlisttosolveview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\views\\solvequiz\\quizlisttosolveview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|c:\\users\\\u0142ukasz\\documents\\studia\\programowanie obiektowe i graficzne\\quizwpf\\quizwpf\\viewmodels\\generatequiz\\modifyquestionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38CD791C-358B-4321-B27A-ACBD4A7BE785}|QuizWPF\\QuizWPF.csproj|solutionrelative:quizwpf\\viewmodels\\generatequiz\\modifyquestionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,143 +42,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Quiz.cs",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Models\\Entities\\Quiz.cs",
-              "RelativeDocumentMoniker": "QuizWPF\\Models\\Entities\\Quiz.cs",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Models\\Entities\\Quiz.cs",
-              "RelativeToolTip": "QuizWPF\\Models\\Entities\\Quiz.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T11:09:17.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\MainWindow.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\MainWindow.xaml",
-              "RelativeToolTip": "QuizWPF\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:32:25.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ModifyQuestionView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\ModifyQuestionView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\ModifyQuestionView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\ModifyQuestionView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\ModifyQuestionView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:23:24.752Z",
+              "Title": "QuizDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\QuizDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\ViewModels\\GenerateQuiz\\QuizDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\QuizDetailsViewModel.cs",
+              "RelativeToolTip": "QuizWPF\\ViewModels\\GenerateQuiz\\QuizDetailsViewModel.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAnwFcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T22:27:30.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChooseQuizToModifyViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\ChooseQuizToModifyViewModel.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\ViewModels\\GenerateQuiz\\ChooseQuizToModifyViewModel.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\ChooseQuizToModifyViewModel.cs",
+              "RelativeToolTip": "QuizWPF\\ViewModels\\GenerateQuiz\\ChooseQuizToModifyViewModel.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAmwFMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T22:47:08.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuizQuestionsListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\QuizQuestionsListViewModel.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\ViewModels\\GenerateQuiz\\QuizQuestionsListViewModel.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\QuizQuestionsListViewModel.cs",
+              "RelativeToolTip": "QuizWPF\\ViewModels\\GenerateQuiz\\QuizQuestionsListViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T15:01:56.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "QuizWPF\\MainViewModel.cs",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\MainViewModel.cs",
-              "RelativeToolTip": "QuizWPF\\MainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ModifyQuestionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\ModifyQuestionViewModel.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\ViewModels\\GenerateQuiz\\ModifyQuestionViewModel.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\ViewModels\\GenerateQuiz\\ModifyQuestionViewModel.cs",
+              "RelativeToolTip": "QuizWPF\\ViewModels\\GenerateQuiz\\ModifyQuestionViewModel.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAUwI0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:32:24.063Z"
+              "WhenOpened": "2024-06-01T17:00:58.927Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuizDetailsView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuizDetailsView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\QuizDetailsView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuizDetailsView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\QuizDetailsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:20:28.726Z",
+              "DocumentIndex": 4,
+              "Title": "SharedQuizDataService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\Services\\SharedQuizDataService.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\Services\\SharedQuizDataService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\Services\\SharedQuizDataService.cs",
+              "RelativeToolTip": "QuizWPF\\Services\\SharedQuizDataService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:23:11.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuestionListToModifyView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuestionListToModifyView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\QuestionListToModifyView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuestionListToModifyView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\QuestionListToModifyView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:22:26.303Z",
+              "Title": "QuizRepositoryService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\Services\\QuizRepositoryService.cs",
+              "RelativeDocumentMoniker": "QuizWPF\\Services\\QuizRepositoryService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\Studia\\Programowanie obiektowe i graficzne\\QuizWPF\\QuizWPF\\Services\\QuizRepositoryService.cs",
+              "RelativeToolTip": "QuizWPF\\Services\\QuizRepositoryService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAtwEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T14:29:59.011Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ChooseQuizToModifyView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\ChooseQuizToModifyView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\ChooseQuizToModifyView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\ChooseQuizToModifyView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\ChooseQuizToModifyView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:26:42.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MenuView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\MenuView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\MenuView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\MenuView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\MenuView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:31:38.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GenerateQuizMenuView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\GenerateQuizMenuView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\GenerateQuizMenuView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\GenerateQuizMenuView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\GenerateQuizMenuView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:25:01.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "QuizConfirmationView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuizConfirmationView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\GenerateQuiz\\QuizConfirmationView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\GenerateQuiz\\QuizConfirmationView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\GenerateQuiz\\QuizConfirmationView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:21:37.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "QuestionSolveView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\SolveQuiz\\QuestionSolveView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\SolveQuiz\\QuestionSolveView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\SolveQuiz\\QuestionSolveView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\SolveQuiz\\QuestionSolveView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:17:18.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "QuizListToSolveView.xaml",
-              "DocumentMoniker": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\SolveQuiz\\QuizListToSolveView.xaml",
-              "RelativeDocumentMoniker": "QuizWPF\\Views\\SolveQuiz\\QuizListToSolveView.xaml",
-              "ToolTip": "D:\\Studia\\Semestr 4\\Programowanie obiektowe i graficzne\\Quiz\\QuizWPF\\Views\\SolveQuiz\\QuizListToSolveView.xaml",
-              "RelativeToolTip": "QuizWPF\\Views\\SolveQuiz\\QuizListToSolveView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-31T10:16:29.489Z"
             }
           ]
         },

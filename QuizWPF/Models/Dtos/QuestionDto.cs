@@ -10,8 +10,8 @@ namespace QuizWPF.Models.Dtos
 {
     public class QuestionDto
     {
-        public int Id { get; set; }
         public string Value { get; set; } = string.Empty;
+        public int QuizId { get; set; }
         public List<AnswerDto> Answers { get; set; } = [new AnswerDto(), new AnswerDto(), new AnswerDto(), new AnswerDto()];
 
         public override string ToString() => Value;

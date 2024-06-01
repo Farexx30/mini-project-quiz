@@ -26,6 +26,7 @@ namespace QuizWPF.Services
             CurrentQuizDto.Name = string.Empty;
             CurrentQuizDto.Category = Category.Games;
             CurrentQuizDto.Questions.Clear();
+            CurrentQuestionDto = null; //Teoretycznie niepotrzebne.
         }
     }
 }
