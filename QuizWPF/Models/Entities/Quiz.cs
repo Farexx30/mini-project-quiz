@@ -13,17 +13,4 @@ namespace QuizWPF.Models.Entities
         public Category Category { get; set; }
         public List<Question> Questions { get; set; } = [];
     }
-
-    public enum Category
-    {
-        Games,
-        Anime,
-        Animals,
-        Math,
-        Geography,
-        Physics,
-        Biology,
-        Chemistry,
-        English,       
-    }
 }

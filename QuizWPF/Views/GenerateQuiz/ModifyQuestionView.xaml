@@ -52,12 +52,12 @@
              Grid.Column="1"
              Grid.ColumnSpan="5"
              Margin="5,0,10,0"
-             Text="Przykładowa treść pytania"
              ScrollViewer.HorizontalScrollBarVisibility="Auto"
              FontSize="32"
              VerticalContentAlignment="Center"
              BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+             BorderThickness="4"
+             Text="{Binding QuestionValue}"/>
         <Label Grid.Row="3"
            Grid.Column="1"
            Grid.ColumnSpan="4"
@@ -73,18 +73,19 @@
              Grid.Column="1"
              Grid.ColumnSpan="2"
              Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
              ScrollViewer.HorizontalScrollBarVisibility="Auto"
              FontSize="32"
              VerticalContentAlignment="Center"
              BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+             BorderThickness="4"
+             Text="{Binding AnswerAValue}"/>
         <CheckBox Grid.Row="4"
               Grid.Column="4"
               BorderBrush="#4BB3FD"
               BorderThickness="1"
               VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+              HorizontalAlignment="Center"
+              IsChecked="{Binding IsASelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -97,18 +98,19 @@
              Grid.Column="1"
              Grid.ColumnSpan="2"
              Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
              ScrollViewer.HorizontalScrollBarVisibility="Auto"
              FontSize="32"
              VerticalContentAlignment="Center"
              BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+             BorderThickness="4"
+             Text="{Binding AnswerBValue}"/>
         <CheckBox Grid.Row="6"
               Grid.Column="4"
               BorderBrush="#4BB3FD"
               BorderThickness="1"
               VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+              HorizontalAlignment="Center"
+              IsChecked="{Binding IsBSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -121,18 +123,19 @@
              Grid.Column="1"
              Grid.ColumnSpan="2"
              Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
              ScrollViewer.HorizontalScrollBarVisibility="Auto"
              FontSize="32"
              VerticalContentAlignment="Center"
              BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+             BorderThickness="4"
+             Text="{Binding AnswerCValue}"/>
         <CheckBox Grid.Row="8"
               Grid.Column="4"
               BorderBrush="#4BB3FD"
               BorderThickness="1"
               VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+              HorizontalAlignment="Center"
+              IsChecked="{Binding IsCSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -145,18 +148,19 @@
              Grid.Column="1"
              Grid.ColumnSpan="2"
              Margin="5,0,0,0"
-             Text="Przykładowa treść odpowiedzi"
              ScrollViewer.HorizontalScrollBarVisibility="Auto"
              FontSize="32"
              VerticalContentAlignment="Center"
              BorderBrush="#4BB3FD"
-             BorderThickness="4"/>
+             BorderThickness="4"
+             Text="{Binding AnswerDValue}"/>
         <CheckBox Grid.Row="10"
               Grid.Column="4"
               BorderBrush="#4BB3FD"
               BorderThickness="1"
               VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+              HorizontalAlignment="Center"
+              IsChecked="{Binding IsDSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
