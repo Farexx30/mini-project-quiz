@@ -60,8 +60,7 @@
                  VerticalContentAlignment="Center"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
-                 MaxLength="200"
-                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+                 MaxLength="200"/>
         <Label Grid.Row="3"
                Grid.Column="1"
                Grid.ColumnSpan="4"
@@ -85,8 +84,7 @@
                  VerticalContentAlignment="Center"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
-                 MaxLength="200"
-                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[1].ErrorContent}"/>
+                 MaxLength="200"/>
 
             <CheckBox Grid.Row="4"
                   Grid.Column="4"
@@ -115,8 +113,7 @@
                  VerticalContentAlignment="Center"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
-                 MaxLength="200"
-                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[2].ErrorContent}"/>
+                 MaxLength="200"/>
 
         <CheckBox Grid.Row="6"
                   Grid.Column="4"
@@ -145,8 +142,7 @@
                  VerticalContentAlignment="Center"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
-                 MaxLength="200"
-                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[3].ErrorContent}"/>
+                 MaxLength="200"/>
 
         <CheckBox Grid.Row="8"
                   Grid.Column="4"
@@ -175,8 +171,7 @@
                  VerticalContentAlignment="Center"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
-                 MaxLength="200"
-                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[4].ErrorContent}"/>
+                 MaxLength="200"/>
 
         <CheckBox Grid.Row="10"
                   Grid.Column="4"

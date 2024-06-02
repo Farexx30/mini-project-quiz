@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 
 namespace QuizWPF.ViewModels.GenerateQuiz
 {
-    public class QuizDetailsViewModel : ViewModelBase, INotifyDataErrorInfo
+    public class QuizDetailsViewModel : ViewModelBase
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
         private Mode _mode;
@@ -32,52 +32,14 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             }
         }
 
-        //Error info:
-        Dictionary<string, List<string>> _Errors = new Dictionary<string, List<string>>();
-
-        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
-        public bool HasErrors => _Errors.Count>0;
-        public IEnumerable GetErrors(string? propertyName)
-        {
-            if(_Errors.TryGetValue(propertyName!, out List<string>? value))
-            {
-                return value;
-            }
-            else
-            {
-                return Enumerable.Empty<string>();
-            }
-        }
-
-        //Validation:
-        public void Validate(string propertyName, object propertyValue)
-        {
-            var results = new List<ValidationResult>();
-
-            Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
-
-            if(results.Count != 0) 
-            {
-                _Errors.Add(propertyName, results.Select(r => r.ErrorMessage!).ToList());
-                ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-            }
-            else
-            {
-                _Errors.Remove(propertyName);
-            }
-        }
-        private bool CanSubmit(object obj) => Validator.TryValidateObject(this, new ValidationContext(this), null);
-
         //Bindings:
         private string _quizTitle = string.Empty;
-        [Required(ErrorMessage ="Podaj tytuł")]
         public string QuizTitle
         {
             get => _quizTitle;
             set
             {
                 _quizTitle = value;
-                Validate(nameof(QuizTitle), value);
                 OnPropertyChanged(nameof(QuizTitle));
             }
         }
@@ -110,7 +72,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         //Initializing:
         private void Initialize()
-        {            
+        {
             QuizTitle = _sharedQuizDataService.CurrentQuizDto!.Name;
             QuizCategory = (uint)_sharedQuizDataService.CurrentQuizDto.Category;
         }
@@ -118,7 +80,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         //Setting mode to ensure, that ViewModel will behave correctly when adding and modifying quiz
         public void SetMode(Mode mode) => _mode = mode;
-
 
         //Navigation:
         private void NavigateToPrevious(object obj)
@@ -134,11 +95,13 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //Buttons logic:
         private void NextButtonClick(object obj)
         {
-            _sharedQuizDataService.CurrentQuizDto!.Name = QuizTitle;
+            _sharedQuizDataService.CurrentQuizDto!.Name = QuizTitle.Trim();
             _sharedQuizDataService.CurrentQuizDto.Category = (Category)QuizCategory;           
 
             NavigateToQuestionList();
         }
 
+        //CanExecute:
+        private bool CanSubmit(object obj) => !string.IsNullOrEmpty(QuizTitle.Trim());
     }
 }

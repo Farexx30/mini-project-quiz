@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace QuizWPF.ViewModels.GenerateQuiz
 {
-    public class ModifyQuestionViewModel : ViewModelBase, INotifyDataErrorInfo
+    public class ModifyQuestionViewModel : ViewModelBase
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
         private Mode _mode;
@@ -29,102 +29,58 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         }
 
 
-        private readonly Dictionary<string, List<string>> _errors = [];
-
-        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
-        public bool HasErrors => _errors.Count > 0;
-        public IEnumerable GetErrors(string? propertyName)
-        {
-            if (_errors.TryGetValue(propertyName!, out List<string>? value))
-            {
-                return value;
-            }
-            else
-            {
-                return Enumerable.Empty<string>();
-            }
-        }
-
-        //Validation:
-        public void Validate(string propertyName, object propertyValue)
-        {
-            var results = new List<ValidationResult>();
-
-            Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
-
-            if (results.Count != 0)
-            {
-                _errors.Add(propertyName, results.Select(r => r.ErrorMessage!).ToList());
-                ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-            }
-            else
-            {
-                _errors.Remove(propertyName);
-            }
-        }
-
-
         private string _questionValue = null!;
-        [Required(ErrorMessage = "Podaj treść pytania")]
         public string QuestionValue
         {
             get => _questionValue;
             set
             {
                 _questionValue = value;
-                Validate(nameof(QuestionValue), value);
                 OnPropertyChanged(nameof(QuestionValue));
             }
         }
 
         private string _answerAValue = null!;
-        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerAValue
         {
             get => _answerAValue;
             set
             {
                 _answerAValue = value;
-                Validate(nameof(AnswerAValue), value);
                 OnPropertyChanged(nameof(AnswerAValue));
             }
         }
 
         private string _answerBValue = null!;
-        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerBValue
         {
             get => _answerBValue;
             set
             {
                 _answerBValue = value;
-                Validate(nameof(AnswerBValue), value);
                 OnPropertyChanged(nameof(AnswerBValue));
             }
         }
 
         private string _answerCValue = null!;
-        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerCValue
         {
             get => _answerCValue;
             set
             {
                 _answerCValue = value;
-                Validate(nameof(AnswerCValue), value);
+
                 OnPropertyChanged(nameof(AnswerCValue));
             }
         }
 
         private string _answerDValue = null!;
-        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerDValue
         {
             get => _answerDValue;
             set
             {
                 _answerDValue = value;
-                Validate(nameof(AnswerDValue), value);
                 OnPropertyChanged(nameof(AnswerDValue));
             }
         }
@@ -186,7 +142,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             Initialize();
         }
 
-        private bool CanSubmit(object obj) => Validator.TryValidateObject(this, new ValidationContext(this), null) && (IsASelected || IsBSelected || IsCSelected || IsDSelected);
         
         private void Initialize()
         {
@@ -205,11 +160,11 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         private void NavigateToQuizQuestionsList(object obj)
         {
-            _sharedQuizDataService.CurrentQuestionDto!.Value = QuestionValue;
-            _sharedQuizDataService.CurrentQuestionDto.Answers[0].Value = AnswerAValue;
-            _sharedQuizDataService.CurrentQuestionDto.Answers[1].Value = AnswerBValue;
-            _sharedQuizDataService.CurrentQuestionDto.Answers[2].Value = AnswerCValue;
-            _sharedQuizDataService.CurrentQuestionDto.Answers[3].Value = AnswerDValue;
+            _sharedQuizDataService.CurrentQuestionDto!.Value = QuestionValue.Trim();
+            _sharedQuizDataService.CurrentQuestionDto.Answers[0].Value = AnswerAValue.Trim();
+            _sharedQuizDataService.CurrentQuestionDto.Answers[1].Value = AnswerBValue.Trim();
+            _sharedQuizDataService.CurrentQuestionDto.Answers[2].Value = AnswerCValue.Trim();
+            _sharedQuizDataService.CurrentQuestionDto.Answers[3].Value = AnswerDValue.Trim();
             _sharedQuizDataService.CurrentQuestionDto.Answers[0].IsCorrect = IsASelected;
             _sharedQuizDataService.CurrentQuestionDto.Answers[1].IsCorrect = IsBSelected;
             _sharedQuizDataService.CurrentQuestionDto.Answers[2].IsCorrect = IsCSelected;
@@ -218,6 +173,19 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _sharedQuizDataService.CurrentQuestionDto = null;
 
             NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode);
+        }
+
+        //CanExecute:
+        private bool CanSubmit(object obj)
+        {
+            return (IsASelected || IsBSelected || IsCSelected || IsDSelected)
+                && !string.IsNullOrEmpty(QuestionValue.Trim())
+                && !string.IsNullOrEmpty(AnswerAValue.Trim())
+                && !string.IsNullOrEmpty(AnswerBValue.Trim())
+                && !string.IsNullOrEmpty(AnswerCValue.Trim())
+                && !string.IsNullOrEmpty(AnswerDValue.Trim())
+                && !_sharedQuizDataService.CurrentQuizDto!.Questions.Any(q => q.Value.ToLower().Trim() == QuestionValue.ToLower().Trim()
+                                                                             && q != _sharedQuizDataService.CurrentQuestionDto);
         }
     }
 }

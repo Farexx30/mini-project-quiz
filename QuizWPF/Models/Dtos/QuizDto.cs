@@ -10,7 +10,7 @@ namespace QuizWPF.Models.Dtos
     public class QuizDto
     {
         public int Id { get; set; }
-        public string Name { get; set; } = null!;
+        public string Name { get; set; } = string.Empty;
         public Category Category { get; set; }
         public List<QuestionDto> Questions { get; set; } = [];
 
