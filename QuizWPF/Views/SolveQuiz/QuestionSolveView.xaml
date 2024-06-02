@@ -38,7 +38,7 @@
         <Border Background="#F5A02F"
                 Grid.ColumnSpan="8">
             
-            <TextBox Text="______"
+            <TextBox Text="{Binding CurrentQuestionNumber}"
                      FontSize="50"
                      BorderThickness="0"
                      Background="Transparent"
@@ -56,7 +56,7 @@
                 Margin="80,0,80,0"
                 Padding="20,5,20,5">
 
-            <TextBox Text="Treść pytania"
+            <TextBox Text="{Binding QuestionValue}"
                      FontSize="36"
                      Foreground="White"
                      Background="Transparent"
@@ -86,7 +86,7 @@
                Content="A. "
                FontSize="36"/>
 
-        <TextBox Text="Odpowiedź A"
+        <TextBox Text="{Binding AnswerAValue}"
                  Grid.Column="2"
                  Grid.Row="4"
                  FontSize="36"
@@ -104,7 +104,8 @@
                   BorderThickness="1"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  IsChecked="{Binding IsASelected}">
+                  IsChecked="{Binding IsASelected}"
+                  IsEnabled="{Binding IsQuizStarted}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -144,7 +145,7 @@
                Content="B. "
                FontSize="36"/>
 
-        <TextBox Text="Odpowiedź B"
+        <TextBox Text="{Binding AnswerBValue}"
                  Grid.Column="2"
                  Grid.Row="6"
                  FontSize="36"
@@ -162,7 +163,8 @@
                   BorderThickness="1"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  IsChecked="{Binding IsBSelected}">
+                  IsChecked="{Binding IsBSelected}"
+                  IsEnabled="{Binding IsQuizStarted}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -175,7 +177,7 @@
                Content="C. "
                FontSize="36"/>
 
-        <TextBox Text="Odpowiedź C"
+        <TextBox Text="{Binding AnswerCValue}"
                  Grid.Column="2"
                  Grid.Row="8"
                  FontSize="36"
@@ -193,7 +195,8 @@
                   BorderThickness="1"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  IsChecked="{Binding IsCSelected}">
+                  IsChecked="{Binding IsCSelected}"
+                  IsEnabled="{Binding IsQuizStarted}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -205,8 +208,8 @@
                HorizontalContentAlignment="Center"
                Content="D. "
                FontSize="36"/>
-        
-        <TextBox Text="Odpowiedź D"
+
+        <TextBox Text="{Binding AnswerDValue}"
                  Grid.Column="2"
                  Grid.Row="10"
                  FontSize="36"
@@ -224,7 +227,8 @@
                   BorderThickness="1"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  IsChecked="{Binding IsDSelected}">
+                  IsChecked="{Binding IsDSelected}"
+                  IsEnabled="{Binding IsQuizStarted}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>

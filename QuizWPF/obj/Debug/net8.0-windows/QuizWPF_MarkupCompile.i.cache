@@ -16,5 +16,5 @@ D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\App.xaml
 25974364240
 MainWindow.xaml;Views\GenerateQuiz\ChooseQuizToModifyView.xaml;Views\GenerateQuiz\GenerateQuizMenuView.xaml;Views\GenerateQuiz\ModifyQuestionView.xaml;Views\GenerateQuiz\QuestionListToModifyView.xaml;Views\GenerateQuiz\QuizConfirmationView.xaml;Views\GenerateQuiz\QuizDetailsView.xaml;Views\MenuView.xaml;Views\SolveQuiz\QuestionSolveView.xaml;Views\SolveQuiz\QuizListToSolveView.xaml;Views\SolveQuiz\QuizResultsView.xaml;
 
-True
+False
 

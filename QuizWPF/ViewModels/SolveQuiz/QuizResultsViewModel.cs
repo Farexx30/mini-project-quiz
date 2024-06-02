@@ -11,6 +11,8 @@ namespace QuizWPF.ViewModels.SolveQuiz
 {
     public class QuizResultsViewModel : ViewModelBase
     {
+        private readonly ISharedSolvedQuizDataService _sharedSolvedQuizDataService;
+
         private INavigationService _navigationService;
         public INavigationService NavigationService
         {
@@ -22,12 +24,35 @@ namespace QuizWPF.ViewModels.SolveQuiz
             }
         }
 
+        //Bindings:
+        private string _solvedQuizResults = null!;
+        public string SolvedQuizResults
+        {
+            get => _solvedQuizResults;
+            set
+            {
+                _solvedQuizResults = value;
+                OnPropertyChanged(nameof(SolvedQuizResults));
+            }
+        }
+
         public RelayCommand NavigateToMainMenuCommand { get; set; } = null!;
 
-        public QuizResultsViewModel(INavigationService navigationService)
+        public QuizResultsViewModel(INavigationService navigationService, ISharedSolvedQuizDataService sharedSolvedQuizDataService)
         {
             _navigationService = navigationService;
+            _sharedSolvedQuizDataService = sharedSolvedQuizDataService;    
+
             NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, o => true);
+
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            SolvedQuizResults = $"Uzyskane punkty: {_sharedSolvedQuizDataService.Score}" +
+                $"/{_sharedSolvedQuizDataService.MaxScore}" +
+                $"{Environment.NewLine}Czas: {_sharedSolvedQuizDataService.TimeElapsed}";
         }
 
         private void NavigateToMainMenu(object obj) => NavigationService.NavigateTo<MenuViewModel>();
