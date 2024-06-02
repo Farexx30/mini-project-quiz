@@ -40,21 +40,28 @@ namespace QuizWPF.Services
 
             using(var updateTransaction = _dbContext.Database.BeginTransaction())
             {
-                _ = _dbContext.Quizzes
+                try
+                {
+                    _ = _dbContext.Quizzes
                     .Where(q => q.Id == modifiedQuiz.Id)
                     .ExecuteUpdate(p =>
                         p.SetProperty(q => q.Name, q => modifiedQuiz.Name)
                         .SetProperty(q => q.Category, q => modifiedQuiz.Category));
 
-                _ = _dbContext.Questions
-                    .Where(q => q.QuizId == modifiedQuiz.Id)
-                    .ExecuteDelete();
+                    _ = _dbContext.Questions
+                        .Where(q => q.QuizId == modifiedQuiz.Id)
+                        .ExecuteDelete();
 
-                _dbContext.Questions.AddRange(modifiedQuiz.Questions);
+                    _dbContext.Questions.AddRange(modifiedQuiz.Questions);
 
-                _dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
 
-                updateTransaction.Commit();
+                    updateTransaction.Commit();
+                }    
+                catch (Exception)
+                {
+                    updateTransaction.Rollback();
+                }
             }           
         }
 
