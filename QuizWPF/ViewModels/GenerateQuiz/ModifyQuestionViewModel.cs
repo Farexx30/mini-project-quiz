@@ -2,15 +2,17 @@
 using QuizWPF.Models.Dtos;
 using QuizWPF.Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QuizWPF.ViewModels.GenerateQuiz
 {
-    public class ModifyQuestionViewModel : ViewModelBase
+    public class ModifyQuestionViewModel : ViewModelBase, INotifyDataErrorInfo
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
         private Mode _mode;
@@ -27,58 +29,102 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         }
 
 
-        //Bindings:
+        private readonly Dictionary<string, List<string>> _errors = [];
+
+        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
+        public bool HasErrors => _errors.Count > 0;
+        public IEnumerable GetErrors(string? propertyName)
+        {
+            if (_errors.TryGetValue(propertyName!, out List<string>? value))
+            {
+                return value;
+            }
+            else
+            {
+                return Enumerable.Empty<string>();
+            }
+        }
+
+        //Validation:
+        public void Validate(string propertyName, object propertyValue)
+        {
+            var results = new List<ValidationResult>();
+
+            Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
+
+            if (results.Count != 0)
+            {
+                _errors.Add(propertyName, results.Select(r => r.ErrorMessage!).ToList());
+                ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+            }
+            else
+            {
+                _errors.Remove(propertyName);
+            }
+        }
+
+
         private string _questionValue = null!;
+        [Required(ErrorMessage = "Podaj treść pytania")]
         public string QuestionValue
         {
             get => _questionValue;
             set
             {
                 _questionValue = value;
+                Validate(nameof(QuestionValue), value);
                 OnPropertyChanged(nameof(QuestionValue));
             }
         }
 
         private string _answerAValue = null!;
+        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerAValue
         {
             get => _answerAValue;
             set
             {
                 _answerAValue = value;
+                Validate(nameof(AnswerAValue), value);
                 OnPropertyChanged(nameof(AnswerAValue));
             }
         }
 
         private string _answerBValue = null!;
+        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerBValue
         {
             get => _answerBValue;
             set
             {
                 _answerBValue = value;
+                Validate(nameof(AnswerBValue), value);
                 OnPropertyChanged(nameof(AnswerBValue));
             }
         }
 
         private string _answerCValue = null!;
+        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerCValue
         {
             get => _answerCValue;
             set
             {
                 _answerCValue = value;
+                Validate(nameof(AnswerCValue), value);
                 OnPropertyChanged(nameof(AnswerCValue));
             }
         }
 
         private string _answerDValue = null!;
+        [Required(ErrorMessage = "Podaj treść odpowiedzi")]
         public string AnswerDValue
         {
             get => _answerDValue;
             set
             {
                 _answerDValue = value;
+                Validate(nameof(AnswerDValue), value);
                 OnPropertyChanged(nameof(AnswerDValue));
             }
         }
@@ -135,11 +181,13 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _navigationService = navigationService;
             _sharedQuizDataService = sharedQuizDataService;
 
-            NavigateToQuizQuestionsListCommand = new RelayCommand(NavigateToQuizQuestionsList, o => true);
+            NavigateToQuizQuestionsListCommand = new RelayCommand(NavigateToQuizQuestionsList, CanSubmit);
 
             Initialize();
         }
 
+        private bool CanSubmit(object obj) => Validator.TryValidateObject(this, new ValidationContext(this), null) && (IsASelected || IsBSelected || IsCSelected || IsDSelected);
+        
         private void Initialize()
         {
             QuestionValue = _sharedQuizDataService.CurrentQuestionDto!.Value;
@@ -171,6 +219,5 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
             NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode);
         }
-
     }
 }
