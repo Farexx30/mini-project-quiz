@@ -30,8 +30,15 @@ namespace QuizWPF.Services
         {
             var newQuiz = _mapper.Map<Quiz>(newQuizDto);
 
-            _dbContext.Quizzes.Add(newQuiz);
-            _dbContext.SaveChanges();
+            try
+            {
+                _dbContext.Quizzes.Add(newQuiz);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił błąd z bazą danych");
+            }
         }
 
         public void UpdateExistingQuiz(QuizDto modifiedQuizDto)
@@ -61,32 +68,48 @@ namespace QuizWPF.Services
                 catch (Exception)
                 {
                     updateTransaction.Rollback();
+                    MessageBox.Show("Wystąpił błąd z bazą danych");
                 }
             }           
         }
 
         public List<QuizDto> GetAllQuizzes()
         {
-            var allQuizzes = _dbContext.Quizzes
-                .AsNoTracking()
-                .ToList();
+            try
+            {
+                var allQuizzes = _dbContext.Quizzes
+                    .AsNoTracking()
+                    .ToList();
 
-            var allQuizzesDto = _mapper.Map<List<QuizDto>>(allQuizzes);
-
-            return allQuizzesDto;
+                var allQuizzesDto = _mapper.Map<List<QuizDto>>(allQuizzes);
+                return allQuizzesDto;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił błąd z bazą danych");
+                return [];
+            }
         }
 
         public List<QuestionDto> GetQuizData(int quizId)
         {
-            var allQuizQuestions = _dbContext.Questions
-                .AsNoTracking()
-                .Include(a => a.Answers)
-                .Where(q => q.QuizId == quizId)
-                .ToList();
+            try
+            {
+                var allQuizQuestions = _dbContext.Questions
+                    .AsNoTracking()
+                    .Include(a => a.Answers)
+                    .Where(q => q.QuizId == quizId)
+                    .ToList();
 
-            var allQuizQuestionsDtos = _mapper.Map<List<QuestionDto>>(allQuizQuestions);
+                var allQuizQuestionsDtos = _mapper.Map<List<QuestionDto>>(allQuizQuestions);
 
-            return allQuizQuestionsDtos;
+                return allQuizQuestionsDtos;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił błąd z bazą danych");
+                return [];
+            }
         }
     }
 }
