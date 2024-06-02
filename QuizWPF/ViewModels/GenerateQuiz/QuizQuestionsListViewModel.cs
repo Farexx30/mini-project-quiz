@@ -77,8 +77,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //Initializing:
         private void Initialize()
         {
-            _sharedQuizDataService.CurrentQuestionDto = null;
-            QuizQuestions = new(_sharedQuizDataService.CurrentQuizDto.Questions);
+            QuizQuestions = new(_sharedQuizDataService.CurrentQuizDto!.Questions);
         }
 
 
@@ -89,14 +88,15 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         private void NavigateToQuizDetails(object obj)
         {
             _sharedQuizDataService.CurrentQuestionDto = null;
+
             NavigationService.NavigateTo<QuizDetailsViewModel>(_mode);
         }
         
         private void DeleteQuestion(object obj)
         {
-            if (SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
+            if (SelectedQuestion is not null)
             {
-                _sharedQuizDataService.CurrentQuizDto.Questions.Remove(SelectedQuestion);
+                _sharedQuizDataService.CurrentQuizDto!.Questions.Remove(SelectedQuestion);
                 QuizQuestions.Remove(SelectedQuestion);
                 _sharedQuizDataService.CurrentQuestionDto = null;
             }           
@@ -104,10 +104,9 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         private void AddNewQuestion(object obj)
         {
-            //byc moze jakas logika jeszcze...
             var newQuestionDto = new QuestionDto()
             {
-                QuizId = _sharedQuizDataService.CurrentQuizDto.Id
+                QuizId = _sharedQuizDataService.CurrentQuizDto!.Id
             };
             QuizQuestions.Add(newQuestionDto);
             _sharedQuizDataService.CurrentQuizDto.Questions.Add(newQuestionDto);
@@ -130,14 +129,15 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         {
             if (_mode == Mode.Add)
             {
-                _quizRepositoryService.AddNewQuiz(_sharedQuizDataService.CurrentQuizDto);
+                _quizRepositoryService.AddNewQuiz(_sharedQuizDataService.CurrentQuizDto!);
             }
             else
             {
-                _quizRepositoryService.UpdateExistingQuiz(_sharedQuizDataService.CurrentQuizDto);
+                _quizRepositoryService.UpdateExistingQuiz(_sharedQuizDataService.CurrentQuizDto!);
             }
            
-            _sharedQuizDataService.ClearCurrentQuizData();
+            _sharedQuizDataService.CurrentQuizDto = null;
+            _sharedQuizDataService.CurrentQuestionDto = null;
 
             NavigationService.NavigateTo<QuizConfirmationViewModel>(_mode);
         }

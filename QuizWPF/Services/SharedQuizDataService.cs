@@ -11,22 +11,13 @@ namespace QuizWPF.Services
 {
     public interface ISharedQuizDataService
     {
-        QuizDto CurrentQuizDto { get; set; }
+        QuizDto? CurrentQuizDto { get; set; }
         QuestionDto? CurrentQuestionDto { get; set; }
-        void ClearCurrentQuizData();
     }
 
     public class SharedQuizDataService : ISharedQuizDataService
     {
-        public QuizDto CurrentQuizDto { get; set; } = new();
+        public QuizDto? CurrentQuizDto { get; set; }
         public QuestionDto? CurrentQuestionDto { get; set; }
-
-        public void ClearCurrentQuizData()
-        {
-            CurrentQuizDto.Name = string.Empty;
-            CurrentQuizDto.Category = Category.Games;
-            CurrentQuizDto.Questions.Clear();
-            CurrentQuestionDto = null; //Teoretycznie niepotrzebne.
-        }
     }
 }

@@ -167,6 +167,8 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _sharedQuizDataService.CurrentQuestionDto.Answers[2].IsCorrect = IsCSelected;
             _sharedQuizDataService.CurrentQuestionDto.Answers[3].IsCorrect = IsDSelected;
 
+            _sharedQuizDataService.CurrentQuestionDto = null;
+
             NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode);
         }
 
