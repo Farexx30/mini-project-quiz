@@ -51,9 +51,10 @@ d:DesignHeight="800" d:DesignWidth="1440"
                  BorderBrush="#4BB3FD"
                  BorderThickness="4"
                  FontSize="50"
-                 Text="{Binding QuizTitle}"
+                 Text="{Binding QuizTitle, UpdateSourceTrigger=PropertyChanged}"
                  Padding="5,0,0,0"
-                 MaxLength="40"/>
+                 MaxLength="40"
+                 ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
             <Label Grid.Column="1"
                Grid.Row="4"
                Content="Wybierz kategorię:"

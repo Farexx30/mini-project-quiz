@@ -103,7 +103,8 @@
                   BorderBrush="#F5A02F"
                   BorderThickness="1"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  IsChecked="{Binding IsASelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -162,7 +163,8 @@
                   BorderBrush="#F5A02F"
                   BorderThickness="1"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  IsChecked="{Binding IsBSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -192,7 +194,8 @@
                   BorderBrush="#F5A02F"
                   BorderThickness="1"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  IsChecked="{Binding IsCSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>
@@ -222,7 +225,8 @@
                   BorderBrush="#F5A02F"
                   BorderThickness="1"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  IsChecked="{Binding IsDSelected}">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="5" ScaleY="5"/>
             </CheckBox.LayoutTransform>

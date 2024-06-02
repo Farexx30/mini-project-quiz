@@ -57,6 +57,51 @@ namespace QuizWPF.ViewModels.SolveQuiz
         //CanExecute:
         private bool CanExecuteStartQuizCommand(object obj) => !_isQuizStarted;
         private bool CanExecuteEndQuizCommand(object obj) => _isQuizStarted;
-        private bool CanExecuteGoToNextQuestionCommand(object obj) => _isQuizStarted;
+        private bool CanExecuteGoToNextQuestionCommand(object obj) => _isQuizStarted && (IsASelected || IsBSelected || IsCSelected || IsDSelected);
+
+
+        private bool _isASelected;
+        public bool IsASelected
+        {
+            get => _isASelected;
+            set
+            {
+                _isASelected = value;
+                OnPropertyChanged(nameof(IsASelected));
+            }
+        }
+
+        private bool _isBSelected;
+        public bool IsBSelected
+        {
+            get => _isBSelected;
+            set
+            {
+                _isBSelected = value;
+                OnPropertyChanged(nameof(IsBSelected));
+            }
+        }
+
+        private bool _isCSelected;
+        public bool IsCSelected
+        {
+            get => _isCSelected;
+            set
+            {
+                _isCSelected = value;
+                OnPropertyChanged(nameof(IsCSelected));
+            }
+        }
+
+        private bool _isDSelected;
+        public bool IsDSelected
+        {
+            get => _isDSelected;
+            set
+            {
+                _isDSelected = value;
+                OnPropertyChanged(nameof(IsDSelected));
+            }
+        }
     }
 }
