@@ -96,7 +96,7 @@ d:DesignHeight="800" d:DesignWidth="1440"
                 FontWeight="Bold"
                 Command="{Binding Path=NextButtonClickCommand}"/>
 
-        <Label Content="Wciśnięcie przycisku 'POWRÓT' skutkuje &#10;utratą wprowadzonych danych"
+        <Label Content="Wciśnięcie przycisku POWRÓT skutkuje &#10;utratą wprowadzonych danych"
                Grid.Row="10"
                Grid.Column="1"
                FontSize="22"/>

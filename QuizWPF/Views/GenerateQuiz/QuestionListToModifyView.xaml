@@ -44,9 +44,9 @@ d:DesignHeight="800" d:DesignWidth="1440"
                 Grid.Row="2"
                 Background="#4BB3FD">
             
-            <Label Content="Pytania"
+            <Label Content="Pytania (min. 3)"
                     Foreground="White"
-                    FontSize="52"
+                    FontSize="50"
                     FontWeight="Bold"
                     VerticalContentAlignment="Center"
                     HorizontalContentAlignment="Center"/>

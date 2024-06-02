@@ -75,10 +75,6 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             Initialize();
         }
 
-        //Validation:
-        private bool CanSave(object obj) => QuizQuestions.Count >= 3;
-        private bool CanDeleteOrEdit(object obj) => SelectedQuestion is not null;
-
 
         //Initializing:
         private void Initialize()
@@ -100,12 +96,9 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         
         private void DeleteQuestion(object obj)
         {
-            if (SelectedQuestion is not null)
-            {
-                _sharedQuizDataService.CurrentQuizDto!.Questions.Remove(SelectedQuestion);
-                QuizQuestions.Remove(SelectedQuestion);
-                _sharedQuizDataService.CurrentQuestionDto = null;
-            }           
+            _sharedQuizDataService.CurrentQuizDto!.Questions.Remove(SelectedQuestion!);
+            QuizQuestions.Remove(SelectedQuestion!);
+            _sharedQuizDataService.CurrentQuestionDto = null;        
         }
 
         private void AddNewQuestion(object obj)
@@ -123,12 +116,9 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         private void ModifyExistingQuestion(object obj)
         {
-            if (SelectedQuestion is not null) //Te zabezpieczenia to tak na szybko, a pewnie inaczej sie je zrobi i rozbuduje i tak.
-            {
-                _sharedQuizDataService.CurrentQuestionDto = SelectedQuestion;
+            _sharedQuizDataService.CurrentQuestionDto = SelectedQuestion;
 
-                NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);
-            }          
+            NavigationService.NavigateTo<ModifyQuestionViewModel>(_mode);        
         }
 
         private void SaveQuiz(object obj)
@@ -147,6 +137,10 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
             NavigationService.NavigateTo<QuizConfirmationViewModel>(_mode);
         }
+
+        //Validation:
+        private bool CanSave(object obj) => QuizQuestions.Count >= 3;
+        private bool CanDeleteOrEdit(object obj) => SelectedQuestion is not null;
     }
 
 
