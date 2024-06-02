@@ -69,8 +69,8 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         //Initializing:
         private void Initialize()
-        {
-            QuizTitle = _sharedQuizDataService.CurrentQuizDto.Name;
+        {            
+            QuizTitle = _sharedQuizDataService.CurrentQuizDto!.Name;
             QuizCategory = (uint)_sharedQuizDataService.CurrentQuizDto.Category;
         }
 
@@ -82,10 +82,10 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //Navigation:
         private void NavigateToPrevious(object obj)
         {
+            _sharedQuizDataService.CurrentQuizDto = null;
+
             if (_mode == Mode.Add) NavigationService.NavigateTo<GenerateQuizMenuViewModel>();
             else NavigationService.NavigateTo<ChooseQuizToModifyViewModel>();
-
-            _sharedQuizDataService.ClearCurrentQuizData();
         }
         private void NavigateToQuestionList() => NavigationService.NavigateTo<QuizQuestionsListViewModel>(_mode);
 
@@ -93,7 +93,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         //Buttons logic:
         private void NextButtonClick(object obj)
         {
-            _sharedQuizDataService.CurrentQuizDto.Name = QuizTitle;
+            _sharedQuizDataService.CurrentQuizDto!.Name = QuizTitle;
             _sharedQuizDataService.CurrentQuizDto.Category = (Category)QuizCategory;           
 
             NavigateToQuestionList();
