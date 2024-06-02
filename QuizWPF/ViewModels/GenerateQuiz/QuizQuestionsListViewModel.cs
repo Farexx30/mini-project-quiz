@@ -4,6 +4,7 @@ using QuizWPF.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,13 +67,18 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _quizRepositoryService = quizRepositoryService;           
 
             NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, o => true);
-            DeleteQuestionCommand = new RelayCommand(DeleteQuestion, o => true);
+            DeleteQuestionCommand = new RelayCommand(DeleteQuestion, CanDeleteOrEdit);
             NavigateToNewQuestionCreatorCommand = new RelayCommand(AddNewQuestion, o => true);
-            NavigateToExistingQuestionModifierCommand = new RelayCommand(ModifyExistingQuestion, o => true);
-            SaveQuizCommand = new RelayCommand(SaveQuiz, o => true);
+            NavigateToExistingQuestionModifierCommand = new RelayCommand(ModifyExistingQuestion, CanDeleteOrEdit);
+            SaveQuizCommand = new RelayCommand(SaveQuiz, CanSave);
 
             Initialize();
         }
+
+        //Validation:
+        private bool CanSave(object obj) => QuizQuestions.Count >= 3;
+        private bool CanDeleteOrEdit(object obj) => SelectedQuestion is not null;
+
 
         //Initializing:
         private void Initialize()

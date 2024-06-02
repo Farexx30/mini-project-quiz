@@ -83,6 +83,10 @@ namespace QuizWPF.ViewModels.SolveQuiz
         private void GoToNextQuestion(object obj)
         {
             MessageBox.Show("Następne pytanie");
+            IsASelected = false;
+            IsBSelected = false;
+            IsCSelected = false;
+            IsDSelected = false;
         }
 
 
