@@ -126,18 +126,16 @@
                    HorizontalContentAlignment="Center"/>
         </Border>
 
-        <TextBox Grid.Column="6"
+        <Label Grid.Column="6"
                  Grid.Row="8"
                  Background="Transparent"
                  Foreground="#F5A02F"
                  BorderThickness="0"
-                 Text="XX:YY"
+                 Content="{Binding TimeElapsed}"
                  FontSize="50"
                  VerticalContentAlignment="Top"
                  HorizontalContentAlignment="Center"
-                 FontWeight="Bold"
-                 IsReadOnly="True"
-                 MaxLines="1"/>
+                 FontWeight="Bold"/>
 
         <Label Grid.Row="6"
                Grid.Column="1"

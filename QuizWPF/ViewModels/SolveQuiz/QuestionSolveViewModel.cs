@@ -2,14 +2,16 @@
 using QuizWPF.Services;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace QuizWPF.ViewModels.SolveQuiz
 {
-    public class QuestionSolveViewModel : ViewModelBase
+    public class QuestionSolveViewModel : ViewModelBase, INotifyPropertyChanged
     {
         private bool _isQuizStarted = false;
         private INavigationService _navigationService;
@@ -23,6 +25,31 @@ namespace QuizWPF.ViewModels.SolveQuiz
             }
         }
 
+        //Timer:
+        private DispatcherTimer timer;
+        private TimeSpan time;
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            time = time.Add(TimeSpan.FromSeconds(1));
+            OnPropertyChanged("TimeElapsed");
+        }
+
+        public string TimeElapsed
+        {
+            get { return time.ToString(@"mm\:ss"); }
+        }
+
+
+        private void StartTimer()
+        {
+            timer.Start();
+        }
+        private void StopTimer()
+        {
+            timer.Stop();
+        }
+
         public RelayCommand StartQuizCommand { get; set; } = null!;
         public RelayCommand EndQuizCommand { get; set; } = null!;
         public RelayCommand GoToNextQuestionCommand { get; set; } = null!;
@@ -31,6 +58,9 @@ namespace QuizWPF.ViewModels.SolveQuiz
         public QuestionSolveViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick!;
             StartQuizCommand = new RelayCommand(StartQuiz, CanExecuteStartQuizCommand);
             EndQuizCommand = new RelayCommand(EndQuiz, CanExecuteEndQuizCommand);
             GoToNextQuestionCommand = new RelayCommand(GoToNextQuestion, CanExecuteGoToNextQuestionCommand);
@@ -39,11 +69,13 @@ namespace QuizWPF.ViewModels.SolveQuiz
         private void StartQuiz(object obj)
         {
             MessageBox.Show("Start");
+            StartTimer();
             _isQuizStarted = true;
         }
 
         private void EndQuiz(object obj)
         {
+            StopTimer();
             MessageBox.Show("Koniec");
             NavigationService.NavigateTo<QuizResultsViewModel>();
         }
