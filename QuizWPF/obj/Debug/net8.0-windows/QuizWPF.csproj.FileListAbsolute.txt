@@ -355,3 +355,4 @@ D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\obj\Debug\n
 D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\obj\Debug\net8.0-windows\QuizWPF.genruntimeconfig.cache
 D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\obj\Debug\net8.0-windows\ref\QuizWPF.dll
 C:\Users\Łukasz\Documents\Studia\Programowanie obiektowe i graficzne\QuizWPF\QuizWPF\bin\Debug\net8.0-windows\AutoMapper.dll
+D:\Studia\Semestr 4\Programowanie obiektowe i graficzne\Quiz\QuizWPF\bin\Debug\net8.0-windows\AutoMapper.dll
