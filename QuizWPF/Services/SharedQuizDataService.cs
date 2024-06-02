@@ -15,9 +15,23 @@ namespace QuizWPF.Services
         QuestionDto? CurrentQuestionDto { get; set; }
     }
 
-    public class SharedQuizDataService : ISharedQuizDataService
+    public interface ISharedSolvedQuizDataService
+    {
+        uint Score { get; set; }
+        uint MaxScore { get; set; }
+        string TimeElapsed { get; set; }
+    }
+
+
+    public class SharedQuizDataService : ISharedQuizDataService, ISharedSolvedQuizDataService
     {
         public QuizDto? CurrentQuizDto { get; set; }
         public QuestionDto? CurrentQuestionDto { get; set; }
+
+
+        //For solved quiz statistics:
+        public uint Score { get; set; }
+        public uint MaxScore { get; set; }
+        public string TimeElapsed { get; set; } = null!;
     }
 }

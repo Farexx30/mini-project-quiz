@@ -47,15 +47,18 @@
         <ComboBox Grid.Column="2"
                   Grid.ColumnSpan="2"
                   Grid.Row="2" 
-                  SelectedIndex="0"
-                  FontSize="50">
+                  FontSize="50"
+                  SelectedIndex="{Binding QuizFilterIndex}">
             <ComboBoxItem Content="---"/>
             <ComboBoxItem Content="Gry"/>
+            <ComboBoxItem Content="Anime"/>
             <ComboBoxItem Content="Zwierzęta"/>
             <ComboBoxItem Content="Matematyka"/>
             <ComboBoxItem Content="Geografia"/>
-            <ComboBoxItem Content="Angielski"/>
             <ComboBoxItem Content="Fizyka"/>
+            <ComboBoxItem Content="Biologia"/>
+            <ComboBoxItem Content="Chemia"/>
+            <ComboBoxItem Content="Angielski"/>
         </ComboBox>
 
         <Border Grid.Column="1"
@@ -87,7 +90,8 @@
                      BorderThickness="0"
                      ScrollViewer.VerticalScrollBarVisibility="Auto"
                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                     d:ItemsSource="{d:SampleData ItemCount=6}"/>
+                     ItemsSource="{Binding AllFilteredQuizzes}"
+                     SelectedItem="{Binding SelectedQuiz}"/>
         </Border>
 
         <Button Content="POWRÓT"

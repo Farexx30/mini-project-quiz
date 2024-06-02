@@ -39,6 +39,7 @@ namespace QuizWPF.Configurations
             //Register services:
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddScoped<ISharedQuizDataService, SharedQuizDataService>();
+            services.AddScoped<ISharedSolvedQuizDataService, SharedQuizDataService>();
             services.AddScoped<IQuizRepositoryService, QuizRepositoryService>();
 
             //Register ViewModels with navigation Func
