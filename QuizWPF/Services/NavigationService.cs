@@ -40,7 +40,7 @@ namespace QuizWPF.Services
             {
                 quizQuestionsListViewModel.SetMode(mode);
             }
-            else if(newViewModel is ModifyQuestionViewModel modifyQuestionViewModel)
+            else if (newViewModel is ModifyQuestionViewModel modifyQuestionViewModel)
             {
                 modifyQuestionViewModel.SetMode(mode);
             }
