@@ -77,7 +77,7 @@ namespace QuizWPF.ViewModels.SolveQuiz
             _quizRepositoryService = quizRepositoryService;
 
             NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, o => true);
-            NavigateToSelectedQuizCommand = new RelayCommand(NavigateToSelectedQuiz, o => true);
+            NavigateToSelectedQuizCommand = new RelayCommand(NavigateToSelectedQuiz, CanSolve);
 
             Initialize();
         }
@@ -92,12 +92,9 @@ namespace QuizWPF.ViewModels.SolveQuiz
 
         private void NavigateToSelectedQuiz(object obj)
         {
-            if (SelectedQuiz is not null)
-            {
-                _sharedQuizDataService.CurrentQuizDto = SelectedQuiz;
+            _sharedQuizDataService.CurrentQuizDto = SelectedQuiz;
 
-                NavigationService.NavigateTo<QuestionSolveViewModel>();
-            }
+            NavigationService.NavigateTo<QuestionSolveViewModel>();
         }
 
         private void FilterQuizzes()
@@ -112,5 +109,9 @@ namespace QuizWPF.ViewModels.SolveQuiz
                     .Where(q => (uint)q.Category == QuizFilterIndex - 1));
             }
         }
+
+
+        //CanExecute:
+        private bool CanSolve(object obj) => SelectedQuiz is not null;
     }
 }

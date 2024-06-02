@@ -49,7 +49,7 @@
                    Padding="20" 
                    VerticalContentAlignment="Center"
                    HorizontalContentAlignment="Center"
-                   Content="    Pomyślnie&#10;wygenerowano&#10;        quiz!"
+                   Content="   Pomyślnie&#10;    zapisano&#10;       quiz!"
                    BorderThickness="0"/>
         </Border>
 

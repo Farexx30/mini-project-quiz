@@ -61,7 +61,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _quizRepositoryService = quizRepositoryService;
             
             NavigateToGenerateQuizMenuCommand = new RelayCommand(NavigateToGenerateQuizMenu, o => true);
-            NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, o => true);
+            NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, CanModify);
 
             Initialize();
         }
@@ -73,14 +73,14 @@ namespace QuizWPF.ViewModels.GenerateQuiz
 
         private void NavigateToGenerateQuizMenu(object obj) => NavigationService.NavigateTo<GenerateQuizMenuViewModel>();
         private void NavigateToQuizDetails(object obj)
-        {
-            if (SelectedQuiz is not null)
-            {                
-                _sharedQuizDataService.CurrentQuizDto = SelectedQuiz;
-                _sharedQuizDataService.CurrentQuizDto.Questions = _quizRepositoryService.GetQuizData(SelectedQuiz.Id);
+        {             
+            _sharedQuizDataService.CurrentQuizDto = SelectedQuiz;
+            _sharedQuizDataService.CurrentQuizDto!.Questions = _quizRepositoryService.GetQuizData(SelectedQuiz!.Id);
 
-                NavigationService.NavigateTo<QuizDetailsViewModel>(Mode.Modify);
-            }    
+            NavigationService.NavigateTo<QuizDetailsViewModel>(Mode.Modify);  
         }
+
+        //CanExecute:
+        private bool CanModify(object obj) => SelectedQuiz is not null;
     }
 }
