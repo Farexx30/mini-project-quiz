@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizWPF.ViewModels.GenerateQuiz
+namespace QuizWPF.Models
 {
     public enum Mode
     {

@@ -43,7 +43,7 @@ namespace QuizWPF.ViewModels.SolveQuiz
             _navigationService = navigationService;
             _sharedSolvedQuizDataService = sharedSolvedQuizDataService;    
 
-            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, o => true);
+            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, _ => true);
 
             Initialize();
         }

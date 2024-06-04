@@ -1,4 +1,5 @@
 ﻿using QuizWPF.Commands;
+using QuizWPF.Models;
 using QuizWPF.Models.Dtos;
 using QuizWPF.Services;
 using System;
@@ -60,7 +61,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _sharedQuizDataService = sharedQuizDataService;
             _quizRepositoryService = quizRepositoryService;
             
-            NavigateToGenerateQuizMenuCommand = new RelayCommand(NavigateToGenerateQuizMenu, o => true);
+            NavigateToGenerateQuizMenuCommand = new RelayCommand(NavigateToGenerateQuizMenu, _ => true);
             NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, CanModify);
 
             Initialize();

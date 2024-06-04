@@ -23,9 +23,9 @@ namespace QuizWPF.ViewModels.SolveQuiz
         private DispatcherTimer _timer = null!;
         private TimeSpan _time;
 
-        private ISharedQuizDataService _sharedQuizDataService;
-        private ISharedSolvedQuizDataService _sharedSolvedQuizDataService;
-        private IQuizRepositoryService _quizRepositoryService;
+        private readonly ISharedQuizDataService _sharedQuizDataService;
+        private readonly ISharedSolvedQuizDataService _sharedSolvedQuizDataService;
+        private readonly IQuizRepositoryService _quizRepositoryService;
         
         private INavigationService _navigationService;
         public INavigationService NavigationService

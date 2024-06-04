@@ -27,8 +27,6 @@ namespace QuizWPF.Models
                 .HasMany(q => q.Answers)
                 .WithOne(a => a.Question)
                 .HasForeignKey(a => a.QuestionId);
-
-            //Tutaj jeszcze pare ograniczeń itd. bedzie mozna dodac, ale sama struktura git, i ZAKAZ ruszania zawartosci folderu "Migrations", no chyba, ze wie co sie robi, bo to wtedy moze rozwalić przyszłe ewentualne zmiany na bazie.
         }
     }
 }

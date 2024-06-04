@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace QuizWPF.Services
 {
-    public interface IQuizRepositoryService
+    public interface IQuizRepositoryService //Możnaby to rozdzielić na 2 interfejsy, ale dla uproszczenia zostawiamy tak.
     {
         void AddNewQuiz(QuizDto newQuizDto);
         void UpdateExistingQuiz(QuizDto modifiedQuizDto);
@@ -45,7 +45,7 @@ namespace QuizWPF.Services
         {
             var modifiedQuiz = _mapper.Map<Quiz>(modifiedQuizDto);
 
-            using(var updateTransaction = _dbContext.Database.BeginTransaction())
+            using (var updateTransaction = _dbContext.Database.BeginTransaction())
             {
                 try
                 {

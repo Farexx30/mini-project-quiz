@@ -19,6 +19,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
     public class QuizDetailsViewModel : ViewModelBase
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
+
         private Mode _mode;
 
         private INavigationService _navigationService;
@@ -64,7 +65,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _navigationService = navigationService;
             _sharedQuizDataService = sharedQuizDataService;
 
-            NavigateToPreviousCommand = new RelayCommand(NavigateToPrevious, o => true);
+            NavigateToPreviousCommand = new RelayCommand(NavigateToPrevious, _ => true);
             NextButtonClickCommand = new RelayCommand(NextButtonClick, CanSubmit);
 
             Initialize();

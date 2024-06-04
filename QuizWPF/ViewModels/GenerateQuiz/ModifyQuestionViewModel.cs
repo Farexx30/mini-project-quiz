@@ -1,4 +1,5 @@
 ﻿using QuizWPF.Commands;
+using QuizWPF.Models;
 using QuizWPF.Models.Dtos;
 using QuizWPF.Services;
 using System;
@@ -15,6 +16,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
     public class ModifyQuestionViewModel : ViewModelBase
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
+
         private Mode _mode;
 
         private INavigationService _navigationService;
