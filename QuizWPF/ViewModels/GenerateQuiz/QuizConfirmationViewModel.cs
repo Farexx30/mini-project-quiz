@@ -26,7 +26,8 @@ namespace QuizWPF.ViewModels.GenerateQuiz
         public QuizConfirmationViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, o => true);
+
+            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, _ => true);
         }
 
         private void NavigateToMainMenu(object obj) => NavigationService.NavigateTo<MenuViewModel>();

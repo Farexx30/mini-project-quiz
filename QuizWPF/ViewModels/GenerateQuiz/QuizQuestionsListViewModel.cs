@@ -1,4 +1,5 @@
 ﻿using QuizWPF.Commands;
+using QuizWPF.Models;
 using QuizWPF.Models.Dtos;
 using QuizWPF.Services;
 using System;
@@ -17,6 +18,7 @@ namespace QuizWPF.ViewModels.GenerateQuiz
     {
         private readonly ISharedQuizDataService _sharedQuizDataService;
         private readonly IQuizRepositoryService _quizRepositoryService;
+
         private Mode _mode;
 
         private INavigationService _navigationService;
@@ -66,9 +68,9 @@ namespace QuizWPF.ViewModels.GenerateQuiz
             _sharedQuizDataService = sharedQuizDataService;
             _quizRepositoryService = quizRepositoryService;           
 
-            NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, o => true);
+            NavigateToQuizDetailsCommand = new RelayCommand(NavigateToQuizDetails, _ => true);
             DeleteQuestionCommand = new RelayCommand(DeleteQuestion, CanDeleteOrEdit);
-            NavigateToNewQuestionCreatorCommand = new RelayCommand(AddNewQuestion, o => true);
+            NavigateToNewQuestionCreatorCommand = new RelayCommand(AddNewQuestion, _ => true);
             NavigateToExistingQuestionModifierCommand = new RelayCommand(ModifyExistingQuestion, CanDeleteOrEdit);
             SaveQuizCommand = new RelayCommand(SaveQuiz, CanSave);
 

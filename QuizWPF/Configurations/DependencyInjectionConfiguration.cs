@@ -32,7 +32,7 @@ namespace QuizWPF.Configurations
         {
             //Register DbContext:
             services.AddDbContext<QuizDbContext>(
-                option => option.UseSqlServer(ConfigurationManager.ConnectionStrings["mainDatabase"].ConnectionString));
+                options => options.UseSqlServer(ConfigurationManager.ConnectionStrings["mainDatabase"].ConnectionString));
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

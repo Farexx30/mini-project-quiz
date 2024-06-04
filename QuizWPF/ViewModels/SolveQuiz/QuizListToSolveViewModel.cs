@@ -76,7 +76,7 @@ namespace QuizWPF.ViewModels.SolveQuiz
             _sharedQuizDataService = sharedQuizDataService;
             _quizRepositoryService = quizRepositoryService;
 
-            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, o => true);
+            NavigateToMainMenuCommand = new RelayCommand(NavigateToMainMenu, _ => true);
             NavigateToSelectedQuizCommand = new RelayCommand(NavigateToSelectedQuiz, CanSolve);
 
             Initialize();

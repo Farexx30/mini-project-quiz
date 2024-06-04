@@ -1,4 +1,5 @@
-﻿using QuizWPF.ViewModels;
+﻿using QuizWPF.Models;
+using QuizWPF.ViewModels;
 using QuizWPF.ViewModels.GenerateQuiz;
 using System;
 using System.Collections.Generic;
