@@ -1,9 +1,0 @@
-Poniżej znajduje się link do projektu (jako publiczne repozytorium na github):
-
-https://github.com/Farexx30/mini-project-quiz
-
-
-Warto również zaznaczyć, że baza danych występuje na Azure (darmowa wersja), przez co pierwsze zapytanie do niej, może dosyć długo potrwać, gdyż baza będzie wtedy w fazie "wybudzania" i najprawdopodobniej skończy się błędem "Connection timed out". Natomiast po jej pełnym wybudzeniu (przeważnie około 40-45 sekund) już wszystko będzie działało sprawnie.
-
-Jest również szansa, że w przyszłości ta baza danych nie będzie już istnieć, ponieważ najpewniej będziemy chcieli wykorzystać też ten zasób na Azure do innych projektów, a niestety jest możliwość jedynie jednego darmowego zasobu "SQL Database" naraz na jednym koncie.
-
