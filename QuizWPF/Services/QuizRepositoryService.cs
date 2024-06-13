@@ -35,9 +35,9 @@ namespace QuizWPF.Services
                 _dbContext.Quizzes.Add(newQuiz);
                 _dbContext.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wystąpił błąd z bazą danych");
+                MessageBox.Show($"Wystąpił błąd z bazą danych:\n{ex.Message}");
             }
         }
 
@@ -65,10 +65,10 @@ namespace QuizWPF.Services
 
                     updateTransaction.Commit();
                 }    
-                catch (Exception)
+                catch (Exception ex)
                 {
                     updateTransaction.Rollback();
-                    MessageBox.Show("Wystąpił błąd z bazą danych");
+                    MessageBox.Show($"Wystąpił błąd z bazą danych:\n{ex.Message}");
                 }
             }           
         }
@@ -82,11 +82,12 @@ namespace QuizWPF.Services
                     .ToList();
 
                 var allQuizzesDto = _mapper.Map<List<QuizDto>>(allQuizzes);
+
                 return allQuizzesDto;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wystąpił błąd z bazą danych");
+                MessageBox.Show($"Wystąpił błąd z bazą danych:\n{ex.Message}");
                 return [];
             }
         }
@@ -105,9 +106,9 @@ namespace QuizWPF.Services
 
                 return allQuizQuestionsDtos;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wystąpił błąd z bazą danych");
+                MessageBox.Show($"Wystąpił błąd z bazą danych:\n{ex.Message}");
                 return [];
             }
         }
